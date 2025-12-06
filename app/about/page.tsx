@@ -108,62 +108,30 @@ const companies = [
   },
 ];
 
-const skills = [
-  {
-    category: "Backend",
-    items: [
-      { name: "NestJS", icon: SiNestjs, color: "#E0234E" },
-      { name: "Go", icon: SiGo, color: "#00ADD8" },
-      { name: "Node.js", icon: SiNodedotjs, color: "#339933" },
-      { name: "Express.js", icon: SiExpress, color: "#000000" },
-      { name: "Python", icon: SiPython, color: "#3776AB" },
-    ],
-  },
-  {
-    category: "Database",
-    items: [
-      { name: "PostgreSQL", icon: SiPostgresql, color: "#4169E1" },
-      { name: "MongoDB", icon: SiMongodb, color: "#47A248" },
-      { name: "Redis", icon: SiRedis, color: "#DC382D" },
-      { name: "Prisma", icon: SiPrisma, color: "#2D3748" },
-      { name: "Mongoose", icon: SiMongoose, color: "#880000" },
-    ],
-  },
-  {
-    category: "Message Queues",
-    items: [
-      { name: "RabbitMQ", icon: SiRabbitmq, color: "#FF6600" },
-      { name: "BullMQ", icon: SiRedis, color: "#DC382D" },
-      { name: "Redis Queue", icon: SiRedis, color: "#DC382D" },
-    ],
-  },
-  {
-    category: "Frontend",
-    items: [
-      { name: "React", icon: SiReact, color: "#61DAFB" },
-      { name: "Next.js", icon: SiNextdotjs, color: "#000000" },
-      { name: "Remix", icon: SiRemix, color: "#000000" },
-      { name: "TypeScript", icon: SiTypescript, color: "#3178C6" },
-      { name: "Tailwind CSS", icon: SiTailwindcss, color: "#06B6D4" },
-      { name: "Framer Motion", icon: SiFramer, color: "#0055FF" },
-    ],
-  },
-  {
-    category: "DevOps",
-    items: [
-      { name: "Docker", icon: SiDocker, color: "#2496ED" },
-      { name: "AWS", icon: SiAmazon, color: "#FF9900" },
-      { name: "Vercel", icon: SiVercel, color: "#000000" },
-      { name: "GitHub Actions", icon: SiGithubactions, color: "#2088FF" },
-    ],
-  },
-  {
-    category: "E-commerce",
-    items: [
-      { name: "Shopify", icon: SiShopify, color: "#96BF48" },
-      { name: "GraphQL", icon: SiGraphql, color: "#E10098" },
-    ],
-  },
+const allSkills = [
+  { name: "NestJS", icon: SiNestjs, color: "#E0234E" },
+  { name: "Go", icon: SiGo, color: "#00ADD8" },
+  { name: "Node.js", icon: SiNodedotjs, color: "#339933" },
+  { name: "PostgreSQL", icon: SiPostgresql, color: "#4169E1" },
+  { name: "MongoDB", icon: SiMongodb, color: "#47A248" },
+  { name: "Redis", icon: SiRedis, color: "#DC382D" },
+  { name: "RabbitMQ", icon: SiRabbitmq, color: "#FF6600" },
+  { name: "Docker", icon: SiDocker, color: "#2496ED" },
+  { name: "React", icon: SiReact, color: "#61DAFB" },
+  { name: "Next.js", icon: SiNextdotjs, color: "#000000" },
+  { name: "TypeScript", icon: SiTypescript, color: "#3178C6" },
+  { name: "Prisma", icon: SiPrisma, color: "#2D3748" },
+  { name: "Express.js", icon: SiExpress, color: "#000000" },
+  { name: "Python", icon: SiPython, color: "#3776AB" },
+  { name: "Tailwind CSS", icon: SiTailwindcss, color: "#06B6D4" },
+  { name: "AWS", icon: SiAmazon, color: "#FF9900" },
+  { name: "GraphQL", icon: SiGraphql, color: "#E10098" },
+  { name: "Shopify", icon: SiShopify, color: "#96BF48" },
+  { name: "Vercel", icon: SiVercel, color: "#000000" },
+  { name: "GitHub Actions", icon: SiGithubactions, color: "#2088FF" },
+  { name: "Remix", icon: SiRemix, color: "#000000" },
+  { name: "Framer Motion", icon: SiFramer, color: "#0055FF" },
+  { name: "Mongoose", icon: SiMongoose, color: "#880000" },
 ];
 
 const achievements = [
@@ -417,71 +385,51 @@ export default function AboutPage() {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {skills.map((skillGroup, index) => (
-              <motion.div
-                key={skillGroup.category}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                whileHover={{ y: -10, scale: 1.02 }}
-                className="group relative bg-white dark:bg-gray-800 rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all overflow-hidden"
+          {/* Single Marquee Row */}
+          <div className="relative">
+            {/* Marquee Container */}
+            <div className="relative overflow-hidden">
+              {/* Gradient Overlays */}
+              <div className="absolute left-0 top-0 bottom-0 w-32 bg-linear-to-r from-gray-50 dark:from-gray-900/50 to-transparent z-10 pointer-events-none" />
+              <div className="absolute right-0 top-0 bottom-0 w-32 bg-linear-to-l from-gray-50 dark:from-gray-900/50 to-transparent z-10 pointer-events-none" />
+
+              {/* Scrolling Content */}
+              <div
+                className="flex gap-6 py-4 animate-marquee hover:pause-marquee"
+                style={{
+                  animationDuration: "40s",
+                }}
               >
-                {/* Gradient Border Effect */}
-                <div className="absolute inset-0 bg-linear-to-br from-blue-500/20 via-purple-500/20 to-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity rounded-3xl" />
-
-                {/* Content */}
-                <div className="relative z-10">
-                  <div className="flex items-center justify-between mb-8">
-                    <h3 className="text-2xl font-bold bg-linear-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                      {skillGroup.category}
-                    </h3>
-                    <div className="w-12 h-12 bg-linear-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center text-white text-xl font-bold shadow-lg group-hover:scale-110 transition-transform">
-                      {skillGroup.items.length}
-                    </div>
-                  </div>
-
-                  <div className="flex flex-wrap gap-4 justify-center">
-                    {skillGroup.items.map((skill, idx) => (
-                      <Tooltip key={skill.name}>
-                        <TooltipTrigger asChild>
-                          <motion.div
-                            initial={{ opacity: 0, scale: 0 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: index * 0.1 + idx * 0.05 }}
-                            whileHover={{ scale: 1.2, y: -8 }}
-                            className="relative group/icon cursor-pointer"
-                          >
-                            <div className="w-16 h-16 bg-white dark:bg-gray-900 rounded-2xl flex items-center justify-center shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-purple-400 dark:hover:border-purple-500">
-                              <skill.icon
-                                className="text-4xl transition-all"
-                                style={{ color: skill.color }}
-                              />
-                            </div>
-                            {/* Glow Effect */}
-                            <div
-                              className="absolute inset-0 rounded-2xl opacity-0 group-hover/icon:opacity-50 blur-xl transition-opacity"
-                              style={{ backgroundColor: skill.color }}
+                {/* Duplicate items for seamless loop */}
+                {[...allSkills, ...allSkills, ...allSkills].map(
+                  (skill, idx) => (
+                    <Tooltip key={`${skill.name}-${idx}`}>
+                      <TooltipTrigger asChild>
+                        <div className="relative group/icon cursor-pointer shrink-0">
+                          <div className="w-20 h-20 bg-white dark:bg-gray-800 rounded-2xl flex items-center justify-center shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-purple-400 dark:hover:border-purple-500 hover:scale-110">
+                            <skill.icon
+                              className="text-5xl transition-all"
+                              style={{ color: skill.color }}
                             />
-                          </motion.div>
-                        </TooltipTrigger>
-                        <TooltipContent
-                          side="top"
-                          className="bg-gray-900 dark:bg-gray-100 text-white dark:text-gray-900 font-semibold"
-                        >
-                          {skill.name}
-                        </TooltipContent>
-                      </Tooltip>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Decorative Corner Element */}
-                <div className="absolute top-0 right-0 w-32 h-32 bg-linear-to-br from-blue-500/10 to-purple-500/10 rounded-bl-full transform translate-x-16 -translate-y-16 group-hover:scale-150 transition-transform duration-500" />
-              </motion.div>
-            ))}
+                          </div>
+                          {/* Glow Effect */}
+                          <div
+                            className="absolute inset-0 rounded-2xl opacity-0 group-hover/icon:opacity-50 blur-xl transition-opacity"
+                            style={{ backgroundColor: skill.color }}
+                          />
+                        </div>
+                      </TooltipTrigger>
+                      <TooltipContent
+                        side="top"
+                        className="bg-gray-900 dark:bg-gray-100 text-white dark:text-gray-900 font-semibold"
+                      >
+                        {skill.name}
+                      </TooltipContent>
+                    </Tooltip>
+                  )
+                )}
+              </div>
+            </div>
           </div>
         </div>
       </section>

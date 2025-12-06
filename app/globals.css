@@ -252,6 +252,24 @@ body {
   box-shadow: 0 20px 40px rgba(139, 92, 246, 0.3);
 }
 
+/* Marquee Animation */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-33.333%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee linear infinite;
+}
+
+.pause-marquee:hover {
+  animation-play-state: paused;
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
