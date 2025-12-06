@@ -16,37 +16,37 @@ import {
 const journey = [
   {
     year: "2020",
-    title: "Started Full Stack Development Journey",
+    title: "Started Backend Development Journey",
     description:
-      "Began professional career as a full stack developer, mastering React, Node.js, and modern web technologies.",
+      "Began learning backend development, focusing on server-side architecture, databases, and API design.",
     icon: FaRocket,
   },
   {
     year: "2021",
-    title: "Joined IBOS Limited",
+    title: "Joined Workspace Infotech Limited",
     description:
-      "Worked on enterprise-level applications, gaining experience in scalable architecture and team collaboration.",
+      "Started professional career as Junior Software Engineer, working on enterprise backend systems and scalable architecture.",
     icon: FaBriefcase,
   },
   {
     year: "2022",
-    title: "Co-founded Softs.ai",
+    title: "Advanced Backend Expertise",
     description:
-      "Launched my own tech company, building innovative SaaS solutions for businesses worldwide.",
-    icon: FaLightbulb,
-  },
-  {
-    year: "2023",
-    title: "Specialized in Shopify Development",
-    description:
-      "Became a Shopify expert, building custom apps and Hydrogen storefronts for e-commerce brands.",
+      "Deepened expertise in NestJS, Go, microservices architecture, and message queues (BullMQ, RabbitMQ).",
     icon: FaCode,
   },
   {
-    year: "2024",
-    title: "Full Stack Lead at Bevy Commerce",
+    year: "2023",
+    title: "Joined Bevy Commerce",
     description:
-      "Leading full stack development initiatives while continuing to grow Softs.ai.",
+      "Started as Full Stack Developer, designing and implementing backend architecture for e-commerce platforms.",
+    icon: FaLightbulb,
+  },
+  {
+    year: "2024",
+    title: "Co-founded Softs.ai",
+    description:
+      "Launched product-based startup with 2 co-founders as CTO, building innovative SaaS products with focus on backend architecture.",
     icon: FaAward,
   },
 ];
@@ -55,30 +55,42 @@ const companies = [
   {
     name: "Bevy Commerce",
     role: "Full Stack Developer",
-    period: "2024 - Present",
+    period: "April 2023 - Present",
     location: "Remote",
     description:
-      "Leading development of e-commerce solutions and platform integrations.",
+      "Designing and implementing scalable backend architecture for e-commerce solutions. Working with NestJS, Go, PostgreSQL, and microservices.",
   },
   {
     name: "Softs.ai",
     role: "Co-founder & CTO",
-    period: "2022 - Present",
+    period: "January 2024 - Present",
     location: "Bangladesh",
     description:
-      "Building innovative SaaS products including Retail Pilot, Accounting Pilot, and Message Pilot.",
+      "Product-based startup with 3 co-founders. Building innovative SaaS products including Retail Pilot, Accounting Pilot, and Message Pilot. Leading backend architecture design, database modeling, and system scalability.",
   },
   {
-    name: "IBOS Limited",
-    role: "Full Stack Developer",
-    period: "2021 - 2022",
+    name: "Workspace Infotech Limited",
+    role: "Junior Software Engineer",
+    period: "August 2021 - April 2023",
     location: "Dhaka, Bangladesh",
     description:
-      "Developed enterprise applications for BRAC and international clients across UAE, Netherlands, Singapore, Germany, and Holland.",
+      "Started professional career developing backend systems and APIs. Gained experience in scalable architecture and enterprise applications.",
   },
 ];
 
 const skills = [
+  {
+    category: "Backend",
+    items: ["NestJS", "Go", "Node.js", "Go Fiber", "Express.js", "Python"],
+  },
+  {
+    category: "Database",
+    items: ["PostgreSQL", "MongoDB", "Redis", "Prisma ORM", "Mongoose"],
+  },
+  {
+    category: "Message Queues",
+    items: ["BullMQ", "RabbitMQ", "Redis Queue"],
+  },
   {
     category: "Frontend",
     items: [
@@ -89,14 +101,6 @@ const skills = [
       "Tailwind CSS",
       "Framer Motion",
     ],
-  },
-  {
-    category: "Backend",
-    items: ["Node.js", "Go", "Python", "Express.js", "NestJS", "Go Fiber"],
-  },
-  {
-    category: "Database",
-    items: ["PostgreSQL", "MongoDB", "Redis", "Prisma ORM", "Mongoose"],
   },
   {
     category: "DevOps",

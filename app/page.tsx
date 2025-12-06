@@ -22,6 +22,7 @@ import {
   SiVercel,
   SiGithubactions,
   SiRemix,
+  SiRabbitmq,
 } from "react-icons/si";
 import {
   FaRocket,
@@ -51,6 +52,8 @@ const techStack = [
   { icon: SiPostgresql, name: "PostgreSQL", color: "#4169E1" },
   { icon: SiMongodb, name: "MongoDB", color: "#47A248" },
   { icon: SiRedis, name: "Redis", color: "#DC382D" },
+  { icon: SiRabbitmq, name: "RabbitMQ", color: "#FF6600" },
+  { icon: SiRedis, name: "BullMQ", color: "#DC382D" },
   { icon: SiDocker, name: "Docker", color: "#2496ED" },
   { icon: SiAmazon, name: "AWS", color: "#FF9900" },
   { icon: SiVercel, name: "Vercel", color: "#000000" },
@@ -171,17 +174,18 @@ export default function Home() {
                 transition={{ delay: 0.4 }}
                 className="text-xl sm:text-2xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed"
               >
-                Full Stack Developer crafting world-class web applications with{" "}
+                Backend-focused Full Stack Developer architecting scalable
+                systems with{" "}
                 <span className="font-semibold text-blue-600 dark:text-blue-400">
-                  React
+                  NestJS
                 </span>
                 ,{" "}
                 <span className="font-semibold text-purple-600 dark:text-purple-400">
-                  Next.js
+                  Go
                 </span>
                 , and{" "}
                 <span className="font-semibold text-green-600 dark:text-green-400">
-                  Shopify
+                  PostgreSQL
                 </span>
               </motion.p>
 
