@@ -114,7 +114,7 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen pt-32 pb-20">
       {/* Hero Section */}
-      <section className="relative overflow-hidden mb-20">
+      <section className="relative overflow-hidden mb-20 py-20">
         <div className="absolute inset-0 bg-linear-to-br from-blue-50 via-purple-50 to-pink-50 dark:from-gray-900 dark:via-purple-900/20 dark:to-pink-900/20 -z-10" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
