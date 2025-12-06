@@ -12,6 +12,36 @@ import {
   FaCode,
   FaLightbulb,
 } from "react-icons/fa";
+import {
+  SiNestjs,
+  SiGo,
+  SiNodedotjs,
+  SiExpress,
+  SiPython,
+  SiPostgresql,
+  SiMongodb,
+  SiRedis,
+  SiPrisma,
+  SiMongoose,
+  SiRabbitmq,
+  SiReact,
+  SiNextdotjs,
+  SiRemix,
+  SiTypescript,
+  SiTailwindcss,
+  SiFramer,
+  SiDocker,
+  SiAmazon,
+  SiVercel,
+  SiGithubactions,
+  SiShopify,
+  SiGraphql,
+} from "react-icons/si";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 const journey = [
   {
@@ -81,49 +111,57 @@ const companies = [
 const skills = [
   {
     category: "Backend",
-    items: ["NestJS", "Go", "Node.js", "Go Fiber", "Express.js", "Python"],
+    items: [
+      { name: "NestJS", icon: SiNestjs, color: "#E0234E" },
+      { name: "Go", icon: SiGo, color: "#00ADD8" },
+      { name: "Node.js", icon: SiNodedotjs, color: "#339933" },
+      { name: "Express.js", icon: SiExpress, color: "#000000" },
+      { name: "Python", icon: SiPython, color: "#3776AB" },
+    ],
   },
   {
     category: "Database",
-    items: ["PostgreSQL", "MongoDB", "Redis", "Prisma ORM", "Mongoose"],
+    items: [
+      { name: "PostgreSQL", icon: SiPostgresql, color: "#4169E1" },
+      { name: "MongoDB", icon: SiMongodb, color: "#47A248" },
+      { name: "Redis", icon: SiRedis, color: "#DC382D" },
+      { name: "Prisma", icon: SiPrisma, color: "#2D3748" },
+      { name: "Mongoose", icon: SiMongoose, color: "#880000" },
+    ],
   },
   {
     category: "Message Queues",
-    items: ["BullMQ", "RabbitMQ", "Redis Queue"],
+    items: [
+      { name: "RabbitMQ", icon: SiRabbitmq, color: "#FF6600" },
+      { name: "BullMQ", icon: SiRedis, color: "#DC382D" },
+      { name: "Redis Queue", icon: SiRedis, color: "#DC382D" },
+    ],
   },
   {
     category: "Frontend",
     items: [
-      "React",
-      "Next.js",
-      "Remix",
-      "TypeScript",
-      "Tailwind CSS",
-      "Framer Motion",
+      { name: "React", icon: SiReact, color: "#61DAFB" },
+      { name: "Next.js", icon: SiNextdotjs, color: "#000000" },
+      { name: "Remix", icon: SiRemix, color: "#000000" },
+      { name: "TypeScript", icon: SiTypescript, color: "#3178C6" },
+      { name: "Tailwind CSS", icon: SiTailwindcss, color: "#06B6D4" },
+      { name: "Framer Motion", icon: SiFramer, color: "#0055FF" },
     ],
   },
   {
     category: "DevOps",
-    items: ["Docker", "AWS", "Vercel", "GitHub Actions", "CI/CD Pipelines"],
+    items: [
+      { name: "Docker", icon: SiDocker, color: "#2496ED" },
+      { name: "AWS", icon: SiAmazon, color: "#FF9900" },
+      { name: "Vercel", icon: SiVercel, color: "#000000" },
+      { name: "GitHub Actions", icon: SiGithubactions, color: "#2088FF" },
+    ],
   },
   {
     category: "E-commerce",
     items: [
-      "Shopify Apps",
-      "Hydrogen",
-      "Storefront API",
-      "Admin API",
-      "Polaris",
-    ],
-  },
-  {
-    category: "Other",
-    items: [
-      "REST APIs",
-      "GraphQL",
-      "Microservices",
-      "Data Migration",
-      "Agile/Scrum",
+      { name: "Shopify", icon: SiShopify, color: "#96BF48" },
+      { name: "GraphQL", icon: SiGraphql, color: "#E10098" },
     ],
   },
 ];
@@ -354,8 +392,15 @@ export default function AboutPage() {
       </section>
 
       {/* Skills Section */}
-      <section className="py-20 bg-gray-50 dark:bg-gray-900/50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 bg-gray-50 dark:bg-gray-900/50 relative overflow-hidden">
+        {/* Animated Background Blobs */}
+        <div className="absolute inset-0 opacity-30">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-blue-400 rounded-full mix-blend-multiply filter blur-3xl animate-blob" />
+          <div className="absolute top-40 right-10 w-72 h-72 bg-purple-400 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000" />
+          <div className="absolute bottom-20 left-1/2 w-72 h-72 bg-pink-400 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-4000" />
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -368,7 +413,7 @@ export default function AboutPage() {
               </span>
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-400">
-              Tools I use to build amazing products
+              Hover over the icons to see the technology names
             </p>
           </motion.div>
 
@@ -380,21 +425,61 @@ export default function AboutPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg"
+                whileHover={{ y: -10, scale: 1.02 }}
+                className="group relative bg-white dark:bg-gray-800 rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all overflow-hidden"
               >
-                <h3 className="text-xl font-bold mb-4 text-gray-900 dark:text-white">
-                  {skillGroup.category}
-                </h3>
-                <div className="flex flex-wrap gap-2">
-                  {skillGroup.items.map((skill) => (
-                    <span
-                      key={skill}
-                      className="px-3 py-1 bg-linear-to-r from-blue-100 to-purple-100 dark:from-blue-900/30 dark:to-purple-900/30 text-gray-700 dark:text-gray-300 rounded-full text-sm font-medium"
-                    >
-                      {skill}
-                    </span>
-                  ))}
+                {/* Gradient Border Effect */}
+                <div className="absolute inset-0 bg-linear-to-br from-blue-500/20 via-purple-500/20 to-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity rounded-3xl" />
+
+                {/* Content */}
+                <div className="relative z-10">
+                  <div className="flex items-center justify-between mb-8">
+                    <h3 className="text-2xl font-bold bg-linear-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                      {skillGroup.category}
+                    </h3>
+                    <div className="w-12 h-12 bg-linear-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center text-white text-xl font-bold shadow-lg group-hover:scale-110 transition-transform">
+                      {skillGroup.items.length}
+                    </div>
+                  </div>
+
+                  <div className="flex flex-wrap gap-4 justify-center">
+                    {skillGroup.items.map((skill, idx) => (
+                      <Tooltip key={skill.name}>
+                        <TooltipTrigger asChild>
+                          <motion.div
+                            initial={{ opacity: 0, scale: 0 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: index * 0.1 + idx * 0.05 }}
+                            whileHover={{ scale: 1.2, y: -8 }}
+                            className="relative group/icon cursor-pointer"
+                          >
+                            <div className="w-16 h-16 bg-white dark:bg-gray-900 rounded-2xl flex items-center justify-center shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-purple-400 dark:hover:border-purple-500">
+                              <skill.icon
+                                className="text-4xl transition-all"
+                                style={{ color: skill.color }}
+                              />
+                            </div>
+                            {/* Glow Effect */}
+                            <div
+                              className="absolute inset-0 rounded-2xl opacity-0 group-hover/icon:opacity-50 blur-xl transition-opacity"
+                              style={{ backgroundColor: skill.color }}
+                            />
+                          </motion.div>
+                        </TooltipTrigger>
+                        <TooltipContent
+                          side="top"
+                          className="bg-gray-900 dark:bg-gray-100 text-white dark:text-gray-900 font-semibold"
+                        >
+                          {skill.name}
+                        </TooltipContent>
+                      </Tooltip>
+                    ))}
+                  </div>
                 </div>
+
+                {/* Decorative Corner Element */}
+                <div className="absolute top-0 right-0 w-32 h-32 bg-linear-to-br from-blue-500/10 to-purple-500/10 rounded-bl-full transform translate-x-16 -translate-y-16 group-hover:scale-150 transition-transform duration-500" />
               </motion.div>
             ))}
           </div>
