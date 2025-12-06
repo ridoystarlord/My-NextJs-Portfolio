@@ -60,7 +60,8 @@ const testimonials = [
     name: "John Smith",
     role: "CEO, TechCorp",
     company: "Netherlands",
-    content: "Ridoy delivered an exceptional Shopify app that exceeded our expectations. His technical expertise and attention to detail are outstanding.",
+    content:
+      "Ridoy delivered an exceptional Shopify app that exceeded our expectations. His technical expertise and attention to detail are outstanding.",
     rating: 5,
     avatar: "👨‍💼",
   },
@@ -68,7 +69,8 @@ const testimonials = [
     name: "Sarah Johnson",
     role: "Product Manager",
     company: "Singapore",
-    content: "Working with Ridoy was a pleasure. He understood our requirements perfectly and delivered a scalable solution on time.",
+    content:
+      "Working with Ridoy was a pleasure. He understood our requirements perfectly and delivered a scalable solution on time.",
     rating: 5,
     avatar: "👩‍💼",
   },
@@ -76,7 +78,8 @@ const testimonials = [
     name: "Ahmed Al-Rashid",
     role: "CTO, E-commerce Solutions",
     company: "UAE",
-    content: "Impressive full-stack development skills. Ridoy built our entire platform from scratch with Next.js and delivered beyond expectations.",
+    content:
+      "Impressive full-stack development skills. Ridoy built our entire platform from scratch with Next.js and delivered beyond expectations.",
     rating: 5,
     avatar: "👨‍💻",
   },
@@ -84,7 +87,8 @@ const testimonials = [
     name: "Lisa Chen",
     role: "Founder, RetailTech",
     company: "Germany",
-    content: "Excellent communication and technical skills. The POS system Ridoy built is now the backbone of our retail operations.",
+    content:
+      "Excellent communication and technical skills. The POS system Ridoy built is now the backbone of our retail operations.",
     rating: 5,
     avatar: "👩‍💻",
   },
@@ -92,7 +96,8 @@ const testimonials = [
     name: "Michael Brown",
     role: "Director, BRAC",
     company: "Bangladesh",
-    content: "Ridoy&apos;s work on our enterprise application was remarkable. Professional, efficient, and highly skilled developer.",
+    content:
+      "Ridoy&apos;s work on our enterprise application was remarkable. Professional, efficient, and highly skilled developer.",
     rating: 5,
     avatar: "👨‍💼",
   },
@@ -100,13 +105,22 @@ const testimonials = [
     name: "Emma Wilson",
     role: "Marketing Director",
     company: "USA",
-    content: "The email marketing platform Ridoy developed has significantly improved our campaign performance. Highly recommended!",
+    content:
+      "The email marketing platform Ridoy developed has significantly improved our campaign performance. Highly recommended!",
     rating: 5,
     avatar: "👩‍💼",
   },
 ];
 
-const categories = ["All", "UI/UX", "Web Development", "Mobile Design", "Product Demo", "Branding", "Behind the Scenes"];
+const categories = [
+  "All",
+  "UI/UX",
+  "Web Development",
+  "Mobile Design",
+  "Product Demo",
+  "Branding",
+  "Behind the Scenes",
+];
 
 export default function GalleryPage() {
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -120,7 +134,7 @@ export default function GalleryPage() {
       {/* Hero Section */}
       <section className="relative overflow-hidden mb-20">
         <div className="absolute inset-0 bg-linear-to-br from-blue-50 via-purple-50 to-pink-50 dark:from-gray-900 dark:via-purple-900/20 dark:to-pink-900/20 -z-10" />
-        
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -136,13 +150,13 @@ export default function GalleryPage() {
             >
               Visual Portfolio
             </motion.span>
-            
+
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6">
               <span className="bg-linear-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
                 Gallery & Testimonials
               </span>
             </h1>
-            
+
             <p className="text-xl text-gray-600 dark:text-gray-400 leading-relaxed">
               Visual showcase of my work and feedback from clients worldwide
             </p>
@@ -188,7 +202,9 @@ export default function GalleryPage() {
               whileHover={{ scale: 1.05 }}
               className="group cursor-pointer"
             >
-              <div className={`relative h-80 bg-linear-to-br ${item.gradient} rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all`}>
+              <div
+                className={`relative h-80 bg-linear-to-br ${item.gradient} rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all`}
+              >
                 {/* Thumbnail */}
                 <div className="absolute inset-0 flex items-center justify-center">
                   <span className="text-8xl">{item.thumbnail}</span>
@@ -252,7 +268,9 @@ export default function GalleryPage() {
                 {/* Rating */}
                 <div className="flex space-x-1 mb-4 relative z-10">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <span key={i} className="text-yellow-400 text-xl">★</span>
+                    <span key={i} className="text-yellow-400 text-xl">
+                      ★
+                    </span>
                   ))}
                 </div>
 
@@ -267,9 +285,15 @@ export default function GalleryPage() {
                     {testimonial.avatar}
                   </div>
                   <div>
-                    <h4 className="font-bold text-gray-900 dark:text-white">{testimonial.name}</h4>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">{testimonial.role}</p>
-                    <p className="text-xs text-gray-500 dark:text-gray-500">{testimonial.company}</p>
+                    <h4 className="font-bold text-gray-900 dark:text-white">
+                      {testimonial.name}
+                    </h4>
+                    <p className="text-sm text-gray-600 dark:text-gray-400">
+                      {testimonial.role}
+                    </p>
+                    <p className="text-xs text-gray-500 dark:text-gray-500">
+                      {testimonial.company}
+                    </p>
                   </div>
                 </div>
               </motion.div>

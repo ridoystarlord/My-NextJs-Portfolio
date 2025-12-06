@@ -61,25 +61,29 @@ const agileMethodology = [
   {
     icon: FaRocket,
     title: "Sprint Planning",
-    description: "Breaking down complex projects into manageable 2-week sprints with clear goals and deliverables.",
+    description:
+      "Breaking down complex projects into manageable 2-week sprints with clear goals and deliverables.",
     color: "from-blue-500 to-cyan-500",
   },
   {
     icon: FaCode,
     title: "Continuous Integration",
-    description: "Automated testing and deployment pipelines ensuring code quality and rapid delivery.",
+    description:
+      "Automated testing and deployment pipelines ensuring code quality and rapid delivery.",
     color: "from-purple-500 to-pink-500",
   },
   {
     icon: FaUsers,
     title: "Daily Standups",
-    description: "Regular communication and collaboration to identify blockers and maintain momentum.",
+    description:
+      "Regular communication and collaboration to identify blockers and maintain momentum.",
     color: "from-green-500 to-emerald-500",
   },
   {
     icon: FaChartLine,
     title: "Iterative Development",
-    description: "Continuous feedback loops with stakeholders for refining features and user experience.",
+    description:
+      "Continuous feedback loops with stakeholders for refining features and user experience.",
     color: "from-orange-500 to-red-500",
   },
 ];
@@ -87,21 +91,24 @@ const agileMethodology = [
 const featuredProjects = [
   {
     title: "Retail Pilot",
-    description: "Advanced POS System with inventory management, real-time analytics, and multi-store support",
+    description:
+      "Advanced POS System with inventory management, real-time analytics, and multi-store support",
     tech: ["Next.js", "Node.js", "PostgreSQL", "Redis"],
     gradient: "from-blue-600 via-purple-600 to-pink-600",
     icon: FaBolt,
   },
   {
     title: "Accounting Pilot",
-    description: "Comprehensive accounting software with automated bookkeeping and financial reporting",
+    description:
+      "Comprehensive accounting software with automated bookkeeping and financial reporting",
     tech: ["React", "NestJS", "PostgreSQL", "Docker"],
     gradient: "from-green-600 via-teal-600 to-blue-600",
     icon: FaShieldAlt,
   },
   {
     title: "Message Pilot",
-    description: "Omnichannel messaging platform integrating WhatsApp, Email, and SMS in one dashboard",
+    description:
+      "Omnichannel messaging platform integrating WhatsApp, Email, and SMS in one dashboard",
     tech: ["Next.js", "Go", "MongoDB", "Redis"],
     gradient: "from-purple-600 via-pink-600 to-red-600",
     icon: FaCog,
@@ -165,9 +172,17 @@ export default function Home() {
                 className="text-xl sm:text-2xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed"
               >
                 Full Stack Developer crafting world-class web applications with{" "}
-                <span className="font-semibold text-blue-600 dark:text-blue-400">React</span>,{" "}
-                <span className="font-semibold text-purple-600 dark:text-purple-400">Next.js</span>, and{" "}
-                <span className="font-semibold text-green-600 dark:text-green-400">Shopify</span>
+                <span className="font-semibold text-blue-600 dark:text-blue-400">
+                  React
+                </span>
+                ,{" "}
+                <span className="font-semibold text-purple-600 dark:text-purple-400">
+                  Next.js
+                </span>
+                , and{" "}
+                <span className="font-semibold text-green-600 dark:text-green-400">
+                  Shopify
+                </span>
               </motion.p>
 
               <motion.div
@@ -177,10 +192,14 @@ export default function Home() {
                 className="mb-8"
               >
                 <p className="text-lg text-gray-700 dark:text-gray-300 mb-2">
-                  🚀 Co-founder & CTO at <span className="font-bold text-blue-600">Softs.ai</span>
+                  🚀 Co-founder & CTO at{" "}
+                  <span className="font-bold text-blue-600">Softs.ai</span>
                 </p>
                 <p className="text-lg text-gray-700 dark:text-gray-300">
-                  💼 Full Stack Developer at <span className="font-bold text-purple-600">Bevy Commerce</span>
+                  💼 Full Stack Developer at{" "}
+                  <span className="font-bold text-purple-600">
+                    Bevy Commerce
+                  </span>
                 </p>
               </motion.div>
 
@@ -192,7 +211,10 @@ export default function Home() {
               >
                 <Link href="/projects">
                   <motion.button
-                    whileHover={{ scale: 1.05, boxShadow: "0 20px 40px rgba(139, 92, 246, 0.4)" }}
+                    whileHover={{
+                      scale: 1.05,
+                      boxShadow: "0 20px 40px rgba(139, 92, 246, 0.4)",
+                    }}
                     whileTap={{ scale: 0.95 }}
                     className="px-8 py-4 bg-linear-to-r from-blue-600 to-purple-600 text-white rounded-full font-semibold text-lg shadow-xl hover:shadow-2xl transition-all flex items-center space-x-2"
                   >
@@ -228,7 +250,9 @@ export default function Home() {
                 >
                   <div className="text-5xl mb-4">⚡</div>
                   <h3 className="text-2xl font-bold mb-2">Fast & Scalable</h3>
-                  <p className="text-sm opacity-90">Building high-performance applications</p>
+                  <p className="text-sm opacity-90">
+                    Building high-performance applications
+                  </p>
                 </motion.div>
 
                 <motion.div
@@ -238,7 +262,9 @@ export default function Home() {
                 >
                   <div className="text-5xl mb-4">🎨</div>
                   <h3 className="text-2xl font-bold mb-2">Modern Design</h3>
-                  <p className="text-sm opacity-90">Beautiful UI/UX that converts</p>
+                  <p className="text-sm opacity-90">
+                    Beautiful UI/UX that converts
+                  </p>
                 </motion.div>
 
                 <motion.div
@@ -248,7 +274,9 @@ export default function Home() {
                 >
                   <div className="text-5xl mb-4">🚀</div>
                   <h3 className="text-2xl font-bold mb-2">Agile Workflow</h3>
-                  <p className="text-sm opacity-90">Iterative & efficient delivery</p>
+                  <p className="text-sm opacity-90">
+                    Iterative & efficient delivery
+                  </p>
                 </motion.div>
               </div>
             </motion.div>
@@ -274,7 +302,9 @@ export default function Home() {
                 <div className="text-4xl sm:text-5xl font-bold bg-linear-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-2">
                   {stat.number}
                 </div>
-                <div className="text-gray-600 dark:text-gray-400 font-medium">{stat.label}</div>
+                <div className="text-gray-600 dark:text-gray-400 font-medium">
+                  {stat.label}
+                </div>
               </motion.div>
             ))}
           </motion.div>
@@ -327,7 +357,7 @@ export default function Home() {
       {/* Agile Methodology Section */}
       <section className="py-20 relative overflow-hidden">
         <div className="absolute inset-0 bg-linear-to-br from-blue-50 via-purple-50 to-pink-50 dark:from-gray-900 dark:via-purple-900/20 dark:to-pink-900/20 -z-10" />
-        
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -341,7 +371,8 @@ export default function Home() {
               </span>
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-              I follow industry-standard agile methodologies to ensure timely delivery and exceptional quality
+              I follow industry-standard agile methodologies to ensure timely
+              delivery and exceptional quality
             </p>
           </motion.div>
 
@@ -357,7 +388,9 @@ export default function Home() {
                 className="relative group"
               >
                 <div className="h-full bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all">
-                  <div className={`inline-flex p-4 rounded-2xl bg-linear-to-br ${item.color} mb-6`}>
+                  <div
+                    className={`inline-flex p-4 rounded-2xl bg-linear-to-br ${item.color} mb-6`}
+                  >
                     <item.icon className="text-3xl text-white" />
                   </div>
                   <h3 className="text-xl font-bold mb-3 text-gray-900 dark:text-white">
@@ -367,7 +400,9 @@ export default function Home() {
                     {item.description}
                   </p>
                 </div>
-                <div className={`absolute inset-0 bg-linear-to-br ${item.color} rounded-2xl opacity-0 group-hover:opacity-10 transition-opacity -z-10`} />
+                <div
+                  className={`absolute inset-0 bg-linear-to-br ${item.color} rounded-2xl opacity-0 group-hover:opacity-10 transition-opacity -z-10`}
+                />
               </motion.div>
             ))}
           </div>
@@ -405,7 +440,9 @@ export default function Home() {
                 className="group relative"
               >
                 <div className="h-full bg-white dark:bg-gray-800 rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all">
-                  <div className={`h-48 bg-linear-to-br ${project.gradient} p-8 flex items-center justify-center relative overflow-hidden`}>
+                  <div
+                    className={`h-48 bg-linear-to-br ${project.gradient} p-8 flex items-center justify-center relative overflow-hidden`}
+                  >
                     <motion.div
                       whileHover={{ scale: 1.2, rotate: 10 }}
                       transition={{ type: "spring", stiffness: 300 }}
@@ -461,7 +498,7 @@ export default function Home() {
       <section className="py-20 relative overflow-hidden">
         <div className="absolute inset-0 bg-linear-to-br from-blue-600 via-purple-600 to-pink-600 -z-10" />
         <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-20" />
-        
+
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -472,7 +509,8 @@ export default function Home() {
               Let's Build Something Amazing Together
             </h2>
             <p className="text-xl text-white/90 mb-8">
-              Have a project in mind? Let's discuss how we can work together to bring your ideas to life.
+              Have a project in mind? Let's discuss how we can work together to
+              bring your ideas to life.
             </p>
             <Link href="/contact">
               <motion.button

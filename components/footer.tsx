@@ -29,7 +29,11 @@ const footerLinks = {
 
 const socialLinks = [
   { icon: FaGithub, href: "https://github.com/ridoy", label: "GitHub" },
-  { icon: FaLinkedin, href: "https://linkedin.com/in/ridoy", label: "LinkedIn" },
+  {
+    icon: FaLinkedin,
+    href: "https://linkedin.com/in/ridoy",
+    label: "LinkedIn",
+  },
   { icon: FaTwitter, href: "https://twitter.com/ridoy", label: "Twitter" },
 ];
 
@@ -56,8 +60,8 @@ export default function Footer() {
               Ridoy.dev
             </h3>
             <p className="text-gray-300 mb-4 leading-relaxed">
-              Co-founder & CTO of Softs.ai. Full Stack Developer at Bevy Commerce.
-              Building world-class web applications.
+              Co-founder & CTO of Softs.ai. Full Stack Developer at Bevy
+              Commerce. Building world-class web applications.
             </p>
             <div className="flex items-center space-x-4 text-2xl">
               <SiReact className="text-blue-400" />
@@ -163,13 +167,20 @@ export default function Footer() {
         >
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-gray-400 text-sm">
-              © {new Date().getFullYear()} Mehedi Hasan Ridoy. All rights reserved.
+              © {new Date().getFullYear()} Mehedi Hasan Ridoy. All rights
+              reserved.
             </p>
             <div className="flex space-x-6 text-sm text-gray-400">
-              <Link href="/privacy" className="hover:text-white transition-colors">
+              <Link
+                href="/privacy"
+                className="hover:text-white transition-colors"
+              >
                 Privacy Policy
               </Link>
-              <Link href="/terms" className="hover:text-white transition-colors">
+              <Link
+                href="/terms"
+                className="hover:text-white transition-colors"
+              >
                 Terms of Service
               </Link>
             </div>

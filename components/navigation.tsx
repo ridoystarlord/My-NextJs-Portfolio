@@ -87,7 +87,10 @@ export default function Navigation() {
           <div className="hidden md:block">
             <Link href="/contact">
               <motion.button
-                whileHover={{ scale: 1.05, boxShadow: "0 10px 40px rgba(139, 92, 246, 0.3)" }}
+                whileHover={{
+                  scale: 1.05,
+                  boxShadow: "0 10px 40px rgba(139, 92, 246, 0.3)",
+                }}
                 whileTap={{ scale: 0.95 }}
                 className="px-6 py-2.5 bg-linear-to-r from-blue-600 to-purple-600 text-white rounded-full font-medium shadow-lg hover:shadow-xl transition-all"
               >

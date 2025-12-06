@@ -35,7 +35,8 @@ const projects = [
   {
     title: "Retail Pilot",
     category: "SaaS Platform",
-    description: "Advanced Point of Sale (POS) system with comprehensive inventory management, real-time analytics, multi-store support, and customer relationship management. Built for retail businesses to streamline operations and boost sales.",
+    description:
+      "Advanced Point of Sale (POS) system with comprehensive inventory management, real-time analytics, multi-store support, and customer relationship management. Built for retail businesses to streamline operations and boost sales.",
     features: [
       "Real-time inventory tracking",
       "Multi-store management",
@@ -61,7 +62,8 @@ const projects = [
   {
     title: "Accounting Pilot",
     category: "Finance Software",
-    description: "Comprehensive accounting software with automated bookkeeping, financial reporting, tax management, and expense tracking. Designed for SMEs to manage their finances efficiently.",
+    description:
+      "Comprehensive accounting software with automated bookkeeping, financial reporting, tax management, and expense tracking. Designed for SMEs to manage their finances efficiently.",
     features: [
       "Automated bookkeeping",
       "Financial reporting",
@@ -87,7 +89,8 @@ const projects = [
   {
     title: "Message Pilot",
     category: "Communication Platform",
-    description: "Omnichannel messaging platform integrating WhatsApp, Email, SMS, and live chat in a unified dashboard. Perfect for businesses to manage customer communications efficiently.",
+    description:
+      "Omnichannel messaging platform integrating WhatsApp, Email, SMS, and live chat in a unified dashboard. Perfect for businesses to manage customer communications efficiently.",
     features: [
       "Unified inbox for all channels",
       "WhatsApp Business API",
@@ -113,7 +116,8 @@ const projects = [
   {
     title: "Sender Bee",
     category: "Email Marketing",
-    description: "Powerful email marketing platform with drag-and-drop builder, automation workflows, segmentation, and detailed analytics. Built for marketers to create engaging campaigns.",
+    description:
+      "Powerful email marketing platform with drag-and-drop builder, automation workflows, segmentation, and detailed analytics. Built for marketers to create engaging campaigns.",
     features: [
       "Drag-and-drop email builder",
       "Marketing automation",
@@ -138,7 +142,8 @@ const projects = [
   {
     title: "Shopify Product Sync App",
     category: "Shopify App",
-    description: "Advanced Shopify app for syncing products across multiple stores, marketplaces, and sales channels. Automates inventory management and product updates.",
+    description:
+      "Advanced Shopify app for syncing products across multiple stores, marketplaces, and sales channels. Automates inventory management and product updates.",
     features: [
       "Multi-store sync",
       "Marketplace integration",
@@ -163,7 +168,8 @@ const projects = [
   {
     title: "Custom Hydrogen Storefront",
     category: "E-commerce",
-    description: "High-performance Shopify Hydrogen storefront with custom theme, optimized checkout flow, and advanced personalization features for premium brands.",
+    description:
+      "High-performance Shopify Hydrogen storefront with custom theme, optimized checkout flow, and advanced personalization features for premium brands.",
     features: [
       "Blazing fast performance",
       "Custom theme design",
@@ -188,7 +194,8 @@ const projects = [
   {
     title: "Analytics Dashboard",
     category: "Data Visualization",
-    description: "Real-time analytics dashboard for e-commerce businesses. Track sales, customer behavior, inventory, and marketing performance in one place.",
+    description:
+      "Real-time analytics dashboard for e-commerce businesses. Track sales, customer behavior, inventory, and marketing performance in one place.",
     features: [
       "Real-time data",
       "Custom reports",
@@ -212,7 +219,8 @@ const projects = [
   {
     title: "API Gateway Service",
     category: "Backend Infrastructure",
-    description: "High-performance API gateway built with Go for microservices architecture. Handles authentication, rate limiting, load balancing, and request routing.",
+    description:
+      "High-performance API gateway built with Go for microservices architecture. Handles authentication, rate limiting, load balancing, and request routing.",
     features: [
       "Request routing",
       "Rate limiting",
@@ -241,7 +249,7 @@ export default function ProjectsPage() {
       {/* Hero Section */}
       <section className="relative overflow-hidden mb-20">
         <div className="absolute inset-0 bg-linear-to-br from-blue-50 via-purple-50 to-pink-50 dark:from-gray-900 dark:via-purple-900/20 dark:to-pink-900/20 -z-10" />
-        
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -257,16 +265,18 @@ export default function ProjectsPage() {
             >
               Portfolio Showcase
             </motion.span>
-            
+
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6">
               <span className="bg-linear-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
                 Featured Projects
               </span>
             </h1>
-            
+
             <p className="text-xl text-gray-600 dark:text-gray-400 leading-relaxed">
-              A collection of projects I&apos;ve built for clients worldwide, ranging from SaaS platforms to 
-              Shopify apps and custom e-commerce solutions. Each project showcases modern tech stacks and best practices.
+              A collection of projects I&apos;ve built for clients worldwide,
+              ranging from SaaS platforms to Shopify apps and custom e-commerce
+              solutions. Each project showcases modern tech stacks and best
+              practices.
             </p>
           </motion.div>
         </div>
@@ -289,110 +299,119 @@ export default function ProjectsPage() {
           </motion.h2>
 
           <div className="grid lg:grid-cols-1 gap-8">
-            {projects.filter(p => p.type === "featured").map((project, index) => (
-              <motion.div
-                key={project.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.2 }}
-                className="group"
-              >
-                <div className="bg-white dark:bg-gray-800 rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all">
-                  <div className="grid lg:grid-cols-2 gap-0">
-                    {/* Left - Gradient with Icon */}
-                    <div className={`relative h-64 lg:h-auto bg-linear-to-br ${project.gradient} p-12 flex flex-col justify-center items-center text-white overflow-hidden`}>
-                      <motion.div
-                        whileHover={{ scale: 1.1, rotate: 5 }}
-                        transition={{ type: "spring", stiffness: 300 }}
-                        className="relative z-10"
+            {projects
+              .filter((p) => p.type === "featured")
+              .map((project, index) => (
+                <motion.div
+                  key={project.title}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.2 }}
+                  className="group"
+                >
+                  <div className="bg-white dark:bg-gray-800 rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all">
+                    <div className="grid lg:grid-cols-2 gap-0">
+                      {/* Left - Gradient with Icon */}
+                      <div
+                        className={`relative h-64 lg:h-auto bg-linear-to-br ${project.gradient} p-12 flex flex-col justify-center items-center text-white overflow-hidden`}
                       >
-                        <project.icon className="text-8xl opacity-90" />
-                      </motion.div>
-                      <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-all" />
-                      <div className="absolute top-4 right-4 z-10">
-                        <span className="px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-medium">
-                          {project.category}
-                        </span>
-                      </div>
-                    </div>
-
-                    {/* Right - Content */}
-                    <div className="p-8 lg:p-12">
-                      <h3 className="text-3xl font-bold mb-4 text-gray-900 dark:text-white">
-                        {project.title}
-                      </h3>
-                      <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed text-lg">
-                        {project.description}
-                      </p>
-
-                      {/* Features */}
-                      <div className="mb-6">
-                        <h4 className="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase mb-3">
-                          Key Features
-                        </h4>
-                        <div className="grid grid-cols-2 gap-2">
-                          {project.features.map((feature) => (
-                            <div key={feature} className="flex items-start space-x-2">
-                              <span className="text-green-500 mt-1">✓</span>
-                              <span className="text-sm text-gray-700 dark:text-gray-300">{feature}</span>
-                            </div>
-                          ))}
+                        <motion.div
+                          whileHover={{ scale: 1.1, rotate: 5 }}
+                          transition={{ type: "spring", stiffness: 300 }}
+                          className="relative z-10"
+                        >
+                          <project.icon className="text-8xl opacity-90" />
+                        </motion.div>
+                        <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-all" />
+                        <div className="absolute top-4 right-4 z-10">
+                          <span className="px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-medium">
+                            {project.category}
+                          </span>
                         </div>
                       </div>
 
-                      {/* Tech Stack */}
-                      <div className="mb-6">
-                        <h4 className="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase mb-3">
-                          Tech Stack
-                        </h4>
-                        <div className="flex flex-wrap gap-3">
-                          {project.tech.map((tech) => (
-                            <div
-                              key={tech.name}
-                              className="flex items-center space-x-2 px-3 py-2 bg-gray-100 dark:bg-gray-700 rounded-lg"
-                            >
-                              <tech.icon className="text-lg" />
-                              <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
-                                {tech.name}
-                              </span>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
+                      {/* Right - Content */}
+                      <div className="p-8 lg:p-12">
+                        <h3 className="text-3xl font-bold mb-4 text-gray-900 dark:text-white">
+                          {project.title}
+                        </h3>
+                        <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed text-lg">
+                          {project.description}
+                        </p>
 
-                      {/* Actions */}
-                      <div className="flex flex-wrap gap-4">
-                        {project.demoUrl && (
-                          <Link href={project.demoUrl} target="_blank">
-                            <motion.button
-                              whileHover={{ scale: 1.05 }}
-                              whileTap={{ scale: 0.95 }}
-                              className="px-6 py-3 bg-linear-to-r from-blue-600 to-purple-600 text-white rounded-full font-semibold flex items-center space-x-2 shadow-lg hover:shadow-xl transition-all"
-                            >
-                              <FaExternalLinkAlt />
-                              <span>View Demo</span>
-                            </motion.button>
-                          </Link>
-                        )}
-                        {project.githubUrl && (
-                          <Link href={project.githubUrl} target="_blank">
-                            <motion.button
-                              whileHover={{ scale: 1.05 }}
-                              whileTap={{ scale: 0.95 }}
-                              className="px-6 py-3 bg-gray-800 dark:bg-gray-700 text-white rounded-full font-semibold flex items-center space-x-2 shadow-lg hover:shadow-xl transition-all"
-                            >
-                              <FaGithub />
-                              <span>Source Code</span>
-                            </motion.button>
-                          </Link>
-                        )}
+                        {/* Features */}
+                        <div className="mb-6">
+                          <h4 className="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase mb-3">
+                            Key Features
+                          </h4>
+                          <div className="grid grid-cols-2 gap-2">
+                            {project.features.map((feature) => (
+                              <div
+                                key={feature}
+                                className="flex items-start space-x-2"
+                              >
+                                <span className="text-green-500 mt-1">✓</span>
+                                <span className="text-sm text-gray-700 dark:text-gray-300">
+                                  {feature}
+                                </span>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+
+                        {/* Tech Stack */}
+                        <div className="mb-6">
+                          <h4 className="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase mb-3">
+                            Tech Stack
+                          </h4>
+                          <div className="flex flex-wrap gap-3">
+                            {project.tech.map((tech) => (
+                              <div
+                                key={tech.name}
+                                className="flex items-center space-x-2 px-3 py-2 bg-gray-100 dark:bg-gray-700 rounded-lg"
+                              >
+                                <tech.icon className="text-lg" />
+                                <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                                  {tech.name}
+                                </span>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+
+                        {/* Actions */}
+                        <div className="flex flex-wrap gap-4">
+                          {project.demoUrl && (
+                            <Link href={project.demoUrl} target="_blank">
+                              <motion.button
+                                whileHover={{ scale: 1.05 }}
+                                whileTap={{ scale: 0.95 }}
+                                className="px-6 py-3 bg-linear-to-r from-blue-600 to-purple-600 text-white rounded-full font-semibold flex items-center space-x-2 shadow-lg hover:shadow-xl transition-all"
+                              >
+                                <FaExternalLinkAlt />
+                                <span>View Demo</span>
+                              </motion.button>
+                            </Link>
+                          )}
+                          {project.githubUrl && (
+                            <Link href={project.githubUrl} target="_blank">
+                              <motion.button
+                                whileHover={{ scale: 1.05 }}
+                                whileTap={{ scale: 0.95 }}
+                                className="px-6 py-3 bg-gray-800 dark:bg-gray-700 text-white rounded-full font-semibold flex items-center space-x-2 shadow-lg hover:shadow-xl transition-all"
+                              >
+                                <FaGithub />
+                                <span>Source Code</span>
+                              </motion.button>
+                            </Link>
+                          )}
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              </motion.div>
-            ))}
+                </motion.div>
+              ))}
           </div>
         </div>
 
@@ -411,88 +430,100 @@ export default function ProjectsPage() {
           </motion.h2>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.filter(p => p.type === "standard").map((project, index) => (
-              <motion.div
-                key={project.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                whileHover={{ y: -10 }}
-                className="group"
-              >
-                <div className="h-full bg-white dark:bg-gray-800 rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all">
-                  {/* Gradient Header */}
-                  <div className={`relative h-48 bg-linear-to-br ${project.gradient} p-8 flex items-center justify-center overflow-hidden`}>
-                    <motion.div
-                      whileHover={{ scale: 1.2, rotate: 10 }}
-                      transition={{ type: "spring", stiffness: 300 }}
+            {projects
+              .filter((p) => p.type === "standard")
+              .map((project, index) => (
+                <motion.div
+                  key={project.title}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                  whileHover={{ y: -10 }}
+                  className="group"
+                >
+                  <div className="h-full bg-white dark:bg-gray-800 rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all">
+                    {/* Gradient Header */}
+                    <div
+                      className={`relative h-48 bg-linear-to-br ${project.gradient} p-8 flex items-center justify-center overflow-hidden`}
                     >
-                      <project.icon className="text-7xl text-white opacity-90" />
-                    </motion.div>
-                    <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-all" />
-                    <div className="absolute top-4 right-4">
-                      <span className="px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-xs font-medium text-white">
-                        {project.category}
-                      </span>
+                      <motion.div
+                        whileHover={{ scale: 1.2, rotate: 10 }}
+                        transition={{ type: "spring", stiffness: 300 }}
+                      >
+                        <project.icon className="text-7xl text-white opacity-90" />
+                      </motion.div>
+                      <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-all" />
+                      <div className="absolute top-4 right-4">
+                        <span className="px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-xs font-medium text-white">
+                          {project.category}
+                        </span>
+                      </div>
+                    </div>
+
+                    {/* Content */}
+                    <div className="p-6">
+                      <h3 className="text-2xl font-bold mb-3 text-gray-900 dark:text-white">
+                        {project.title}
+                      </h3>
+                      <p className="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
+                        {project.description}
+                      </p>
+
+                      {/* Tech Stack */}
+                      <div className="flex flex-wrap gap-2 mb-4">
+                        {project.tech.slice(0, 4).map((tech) => (
+                          <div
+                            key={tech.name}
+                            className="flex items-center space-x-1 px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded-lg"
+                          >
+                            <tech.icon className="text-sm" />
+                            <span className="text-xs font-medium text-gray-700 dark:text-gray-300">
+                              {tech.name}
+                            </span>
+                          </div>
+                        ))}
+                      </div>
+
+                      {/* Actions */}
+                      <div className="flex gap-3">
+                        {project.demoUrl && (
+                          <Link
+                            href={project.demoUrl}
+                            target="_blank"
+                            className="flex-1"
+                          >
+                            <motion.button
+                              whileHover={{ scale: 1.03 }}
+                              whileTap={{ scale: 0.97 }}
+                              className="w-full px-4 py-2 bg-linear-to-r from-blue-600 to-purple-600 text-white rounded-full font-medium text-sm flex items-center justify-center space-x-2 shadow-md hover:shadow-lg transition-all"
+                            >
+                              <FaExternalLinkAlt className="text-xs" />
+                              <span>Demo</span>
+                            </motion.button>
+                          </Link>
+                        )}
+                        {project.githubUrl && (
+                          <Link
+                            href={project.githubUrl}
+                            target="_blank"
+                            className="flex-1"
+                          >
+                            <motion.button
+                              whileHover={{ scale: 1.03 }}
+                              whileTap={{ scale: 0.97 }}
+                              className="w-full px-4 py-2 bg-gray-800 dark:bg-gray-700 text-white rounded-full font-medium text-sm flex items-center justify-center space-x-2 shadow-md hover:shadow-lg transition-all"
+                            >
+                              <FaGithub className="text-xs" />
+                              <span>Code</span>
+                            </motion.button>
+                          </Link>
+                        )}
+                      </div>
                     </div>
                   </div>
-
-                  {/* Content */}
-                  <div className="p-6">
-                    <h3 className="text-2xl font-bold mb-3 text-gray-900 dark:text-white">
-                      {project.title}
-                    </h3>
-                    <p className="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
-                      {project.description}
-                    </p>
-
-                    {/* Tech Stack */}
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      {project.tech.slice(0, 4).map((tech) => (
-                        <div
-                          key={tech.name}
-                          className="flex items-center space-x-1 px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded-lg"
-                        >
-                          <tech.icon className="text-sm" />
-                          <span className="text-xs font-medium text-gray-700 dark:text-gray-300">
-                            {tech.name}
-                          </span>
-                        </div>
-                      ))}
-                    </div>
-
-                    {/* Actions */}
-                    <div className="flex gap-3">
-                      {project.demoUrl && (
-                        <Link href={project.demoUrl} target="_blank" className="flex-1">
-                          <motion.button
-                            whileHover={{ scale: 1.03 }}
-                            whileTap={{ scale: 0.97 }}
-                            className="w-full px-4 py-2 bg-linear-to-r from-blue-600 to-purple-600 text-white rounded-full font-medium text-sm flex items-center justify-center space-x-2 shadow-md hover:shadow-lg transition-all"
-                          >
-                            <FaExternalLinkAlt className="text-xs" />
-                            <span>Demo</span>
-                          </motion.button>
-                        </Link>
-                      )}
-                      {project.githubUrl && (
-                        <Link href={project.githubUrl} target="_blank" className="flex-1">
-                          <motion.button
-                            whileHover={{ scale: 1.03 }}
-                            whileTap={{ scale: 0.97 }}
-                            className="w-full px-4 py-2 bg-gray-800 dark:bg-gray-700 text-white rounded-full font-medium text-sm flex items-center justify-center space-x-2 shadow-md hover:shadow-lg transition-all"
-                          >
-                            <FaGithub className="text-xs" />
-                            <span>Code</span>
-                          </motion.button>
-                        </Link>
-                      )}
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
+                </motion.div>
+              ))}
           </div>
         </div>
       </section>
@@ -500,7 +531,7 @@ export default function ProjectsPage() {
       {/* CTA Section */}
       <section className="mt-32 relative overflow-hidden">
         <div className="absolute inset-0 bg-linear-to-br from-blue-600 via-purple-600 to-pink-600 -z-10" />
-        
+
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -511,7 +542,8 @@ export default function ProjectsPage() {
               Have a Project in Mind?
             </h2>
             <p className="text-xl text-white/90 mb-8">
-              Let&apos;s work together to turn your ideas into reality. I&apos;m available for freelance projects and consulting.
+              Let&apos;s work together to turn your ideas into reality. I&apos;m
+              available for freelance projects and consulting.
             </p>
             <Link href="/contact">
               <motion.button

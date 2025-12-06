@@ -9,75 +9,97 @@ const blogPosts = [
   {
     id: 1,
     title: "Building Scalable Shopify Apps with Next.js and Prisma",
-    excerpt: "Learn how to build production-ready Shopify apps using Next.js 14, Prisma ORM, and best practices for authentication and API design.",
+    excerpt:
+      "Learn how to build production-ready Shopify apps using Next.js 14, Prisma ORM, and best practices for authentication and API design.",
     category: "Shopify",
     date: "Dec 5, 2025",
     readTime: "8 min read",
-    image: "https://images.unsplash.com/photo-1557821552-17105176677c?w=800&auto=format&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1557821552-17105176677c?w=800&auto=format&fit=crop",
     gradient: "from-green-500 to-emerald-600",
   },
   {
     id: 2,
     title: "Mastering Server Components in Next.js 15",
-    excerpt: "Deep dive into React Server Components, streaming, and advanced patterns for building lightning-fast web applications.",
+    excerpt:
+      "Deep dive into React Server Components, streaming, and advanced patterns for building lightning-fast web applications.",
     category: "Next.js",
     date: "Nov 28, 2025",
     readTime: "12 min read",
-    image: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=800&auto=format&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=800&auto=format&fit=crop",
     gradient: "from-blue-500 to-purple-600",
   },
   {
     id: 3,
     title: "Go Microservices: From Development to Production",
-    excerpt: "Complete guide to building, deploying, and scaling microservices with Go, Docker, and Kubernetes.",
+    excerpt:
+      "Complete guide to building, deploying, and scaling microservices with Go, Docker, and Kubernetes.",
     category: "Backend",
     date: "Nov 20, 2025",
     readTime: "15 min read",
-    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&auto=format&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&auto=format&fit=crop",
     gradient: "from-cyan-500 to-blue-600",
   },
   {
     id: 4,
     title: "TypeScript Advanced Patterns for Enterprise Apps",
-    excerpt: "Explore advanced TypeScript patterns, generics, and type utilities for building maintainable enterprise applications.",
+    excerpt:
+      "Explore advanced TypeScript patterns, generics, and type utilities for building maintainable enterprise applications.",
     category: "TypeScript",
     date: "Nov 15, 2025",
     readTime: "10 min read",
-    image: "https://images.unsplash.com/photo-1516116216624-53e697fedbea?w=800&auto=format&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1516116216624-53e697fedbea?w=800&auto=format&fit=crop",
     gradient: "from-blue-600 to-indigo-600",
   },
   {
     id: 5,
     title: "Database Optimization: PostgreSQL Performance Tuning",
-    excerpt: "Practical tips for optimizing PostgreSQL queries, indexing strategies, and connection pooling for high-traffic applications.",
+    excerpt:
+      "Practical tips for optimizing PostgreSQL queries, indexing strategies, and connection pooling for high-traffic applications.",
     category: "Database",
     date: "Nov 10, 2025",
     readTime: "9 min read",
-    image: "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?w=800&auto=format&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?w=800&auto=format&fit=crop",
     gradient: "from-indigo-600 to-purple-600",
   },
   {
     id: 6,
     title: "React Performance: Optimization Techniques That Matter",
-    excerpt: "Essential React optimization techniques including memoization, code splitting, and virtual list rendering.",
+    excerpt:
+      "Essential React optimization techniques including memoization, code splitting, and virtual list rendering.",
     category: "React",
     date: "Nov 5, 2025",
     readTime: "11 min read",
-    image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&auto=format&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&auto=format&fit=crop",
     gradient: "from-cyan-500 to-teal-600",
   },
 ];
 
-const categories = ["All", "Shopify", "Next.js", "React", "Backend", "TypeScript", "Database"];
+const categories = [
+  "All",
+  "Shopify",
+  "Next.js",
+  "React",
+  "Backend",
+  "TypeScript",
+  "Database",
+];
 
 export default function BlogPage() {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [searchQuery, setSearchQuery] = useState("");
 
   const filteredPosts = blogPosts.filter((post) => {
-    const matchesCategory = selectedCategory === "All" || post.category === selectedCategory;
-    const matchesSearch = post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         post.excerpt.toLowerCase().includes(searchQuery.toLowerCase());
+    const matchesCategory =
+      selectedCategory === "All" || post.category === selectedCategory;
+    const matchesSearch =
+      post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      post.excerpt.toLowerCase().includes(searchQuery.toLowerCase());
     return matchesCategory && matchesSearch;
   });
 
@@ -86,7 +108,7 @@ export default function BlogPage() {
       {/* Hero Section */}
       <section className="relative overflow-hidden mb-20">
         <div className="absolute inset-0 bg-linear-to-br from-blue-50 via-purple-50 to-pink-50 dark:from-gray-900 dark:via-purple-900/20 dark:to-pink-900/20 -z-10" />
-        
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -102,15 +124,16 @@ export default function BlogPage() {
             >
               Blog & Insights
             </motion.span>
-            
+
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6">
               <span className="bg-linear-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
                 Thoughts & Tutorials
               </span>
             </h1>
-            
+
             <p className="text-xl text-gray-600 dark:text-gray-400 leading-relaxed mb-8">
-              Sharing my knowledge about web development, best practices, and lessons learned from building production applications.
+              Sharing my knowledge about web development, best practices, and
+              lessons learned from building production applications.
             </p>
 
             {/* Search Bar */}
@@ -186,7 +209,9 @@ export default function BlogPage() {
                   <div className="bg-white dark:bg-gray-800 rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all h-full flex flex-col">
                     {/* Image */}
                     <div className="relative h-48 overflow-hidden">
-                      <div className={`absolute inset-0 bg-linear-to-br ${post.gradient} opacity-90`} />
+                      <div
+                        className={`absolute inset-0 bg-linear-to-br ${post.gradient} opacity-90`}
+                      />
                       <div className="absolute inset-0 flex items-center justify-center">
                         <span className="text-6xl">📝</span>
                       </div>
@@ -232,7 +257,7 @@ export default function BlogPage() {
       {/* Newsletter CTA */}
       <section className="mt-32 relative overflow-hidden">
         <div className="absolute inset-0 bg-linear-to-br from-blue-600 via-purple-600 to-pink-600 -z-10" />
-        
+
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -243,7 +268,8 @@ export default function BlogPage() {
               Subscribe to My Newsletter
             </h2>
             <p className="text-xl text-white/90 mb-8">
-              Get the latest articles and tutorials delivered to your inbox every week.
+              Get the latest articles and tutorials delivered to your inbox
+              every week.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
               <input

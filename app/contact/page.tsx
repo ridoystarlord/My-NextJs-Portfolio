@@ -40,12 +40,42 @@ const contactInfo = [
 ];
 
 const socialLinks = [
-  { icon: FaGithub, name: "GitHub", link: "https://github.com/ridoy", color: "#333" },
-  { icon: FaLinkedin, name: "LinkedIn", link: "https://linkedin.com/in/ridoy", color: "#0077B5" },
-  { icon: FaTwitter, name: "Twitter", link: "https://twitter.com/ridoy", color: "#1DA1F2" },
-  { icon: FaTelegram, name: "Telegram", link: "https://t.me/ridoy", color: "#0088cc" },
-  { icon: FaWhatsapp, name: "WhatsApp", link: "https://wa.me/8801XXXXXXXXX", color: "#25D366" },
-  { icon: SiDiscord, name: "Discord", link: "https://discord.com/users/ridoy", color: "#5865F2" },
+  {
+    icon: FaGithub,
+    name: "GitHub",
+    link: "https://github.com/ridoy",
+    color: "#333",
+  },
+  {
+    icon: FaLinkedin,
+    name: "LinkedIn",
+    link: "https://linkedin.com/in/ridoy",
+    color: "#0077B5",
+  },
+  {
+    icon: FaTwitter,
+    name: "Twitter",
+    link: "https://twitter.com/ridoy",
+    color: "#1DA1F2",
+  },
+  {
+    icon: FaTelegram,
+    name: "Telegram",
+    link: "https://t.me/ridoy",
+    color: "#0088cc",
+  },
+  {
+    icon: FaWhatsapp,
+    name: "WhatsApp",
+    link: "https://wa.me/8801XXXXXXXXX",
+    color: "#25D366",
+  },
+  {
+    icon: SiDiscord,
+    name: "Discord",
+    link: "https://discord.com/users/ridoy",
+    color: "#5865F2",
+  },
 ];
 
 export default function ContactPage() {
@@ -57,7 +87,9 @@ export default function ContactPage() {
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
+  const [submitStatus, setSubmitStatus] = useState<
+    "idle" | "success" | "error"
+  >("idle");
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -68,12 +100,14 @@ export default function ContactPage() {
       setIsSubmitting(false);
       setSubmitStatus("success");
       setFormData({ name: "", email: "", subject: "", message: "" });
-      
+
       setTimeout(() => setSubmitStatus("idle"), 5000);
     }, 2000);
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
@@ -82,7 +116,7 @@ export default function ContactPage() {
       {/* Hero Section */}
       <section className="relative overflow-hidden mb-20">
         <div className="absolute inset-0 bg-linear-to-br from-blue-50 via-purple-50 to-pink-50 dark:from-gray-900 dark:via-purple-900/20 dark:to-pink-900/20 -z-10" />
-        
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -98,16 +132,17 @@ export default function ContactPage() {
             >
               Get In Touch
             </motion.span>
-            
+
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6">
               <span className="bg-linear-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
                 Let&apos;s Work Together
               </span>
             </h1>
-            
+
             <p className="text-xl text-gray-600 dark:text-gray-400 leading-relaxed">
-              Have a project in mind? I&apos;m available for freelance work and consulting. 
-              Let&apos;s discuss how I can help bring your ideas to life.
+              Have a project in mind? I&apos;m available for freelance work and
+              consulting. Let&apos;s discuss how I can help bring your ideas to
+              life.
             </p>
           </motion.div>
         </div>
@@ -127,10 +162,14 @@ export default function ContactPage() {
               className="block"
             >
               <div className="bg-white dark:bg-gray-800 rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all text-center">
-                <div className={`inline-flex p-6 rounded-2xl bg-linear-to-br ${info.gradient} mb-4`}>
+                <div
+                  className={`inline-flex p-6 rounded-2xl bg-linear-to-br ${info.gradient} mb-4`}
+                >
                   <info.icon className="text-4xl text-white" />
                 </div>
-                <h3 className="text-xl font-bold mb-2 text-gray-900 dark:text-white">{info.title}</h3>
+                <h3 className="text-xl font-bold mb-2 text-gray-900 dark:text-white">
+                  {info.title}
+                </h3>
                 <p className="text-gray-600 dark:text-gray-400">{info.value}</p>
               </div>
             </motion.a>
@@ -150,10 +189,13 @@ export default function ContactPage() {
             <h2 className="text-3xl font-bold mb-6 text-gray-900 dark:text-white">
               Send Me a Message
             </h2>
-            
+
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                <label
+                  htmlFor="name"
+                  className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                >
                   Your Name *
                 </label>
                 <input
@@ -169,7 +211,10 @@ export default function ContactPage() {
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                >
                   Your Email *
                 </label>
                 <input
@@ -185,7 +230,10 @@ export default function ContactPage() {
               </div>
 
               <div>
-                <label htmlFor="subject" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                <label
+                  htmlFor="subject"
+                  className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                >
                   Subject *
                 </label>
                 <input
@@ -201,7 +249,10 @@ export default function ContactPage() {
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                <label
+                  htmlFor="message"
+                  className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                >
                   Message *
                 </label>
                 <textarea
@@ -269,10 +320,11 @@ export default function ContactPage() {
             <h2 className="text-3xl font-bold mb-6 text-gray-900 dark:text-white">
               Connect With Me
             </h2>
-            
+
             <p className="text-lg text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">
-              Feel free to reach out through any of these platforms. I&apos;m most active on GitHub and LinkedIn, 
-              but I respond to all messages within 24 hours.
+              Feel free to reach out through any of these platforms. I&apos;m
+              most active on GitHub and LinkedIn, but I respond to all messages
+              within 24 hours.
             </p>
 
             {/* Social Links Grid */}
@@ -290,8 +342,13 @@ export default function ContactPage() {
                   whileTap={{ scale: 0.95 }}
                   className="flex flex-col items-center justify-center p-6 bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-xl transition-all"
                 >
-                  <social.icon className="text-4xl mb-2" style={{ color: social.color }} />
-                  <span className="text-sm font-medium text-gray-700 dark:text-gray-300">{social.name}</span>
+                  <social.icon
+                    className="text-4xl mb-2"
+                    style={{ color: social.color }}
+                  />
+                  <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                    {social.name}
+                  </span>
                 </motion.a>
               ))}
             </div>
@@ -300,8 +357,8 @@ export default function ContactPage() {
             <div className="bg-linear-to-br from-blue-600 via-purple-600 to-pink-600 rounded-3xl p-8 text-white">
               <h3 className="text-2xl font-bold mb-4">Quick Response</h3>
               <p className="mb-4 leading-relaxed">
-                I typically respond to inquiries within 24 hours. For urgent matters, 
-                feel free to reach out via WhatsApp or Telegram.
+                I typically respond to inquiries within 24 hours. For urgent
+                matters, feel free to reach out via WhatsApp or Telegram.
               </p>
               <div className="flex flex-col space-y-2 text-sm">
                 <div className="flex items-center space-x-2">
@@ -364,8 +421,12 @@ export default function ContactPage() {
               transition={{ delay: index * 0.1 }}
               className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg"
             >
-              <h3 className="text-lg font-bold mb-2 text-gray-900 dark:text-white">{faq.q}</h3>
-              <p className="text-gray-600 dark:text-gray-400 leading-relaxed">{faq.a}</p>
+              <h3 className="text-lg font-bold mb-2 text-gray-900 dark:text-white">
+                {faq.q}
+              </h3>
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+                {faq.a}
+              </p>
             </motion.div>
           ))}
         </div>

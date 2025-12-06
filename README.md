@@ -9,6 +9,7 @@ Visit: [ridoy.dev](https://ridoy.dev)
 ## ✨ Features
 
 ### Design & UX
+
 - **Modern & Colorful Design**: Eye-catching gradients, glass-morphism effects, and professional layouts
 - **Smooth Animations**: Powered by Framer Motion for fluid page transitions and interactions
 - **Fully Responsive**: Optimized for all devices from mobile to desktop
@@ -18,6 +19,7 @@ Visit: [ridoy.dev](https://ridoy.dev)
 ### Pages
 
 #### 🏠 Home
+
 - Impressive hero section with animated gradient backgrounds
 - Statistics showcase (years of experience, projects completed, clients served)
 - Interactive tech stack display with 19+ technologies
@@ -26,6 +28,7 @@ Visit: [ridoy.dev](https://ridoy.dev)
 - Call-to-action section
 
 #### 💼 Projects
+
 - Featured projects with detailed descriptions
 - Tech stack badges for each project
 - Live demo links and case studies
@@ -33,6 +36,7 @@ Visit: [ridoy.dev](https://ridoy.dev)
 - Project categories: SaaS, Shopify Apps, E-commerce, Backend
 
 **Showcased Projects:**
+
 - Retail Pilot (POS System)
 - Accounting Pilot (Accounting Software)
 - Message Pilot (Omnichannel Messaging)
@@ -41,6 +45,7 @@ Visit: [ridoy.dev](https://ridoy.dev)
 - Custom Backend Solutions
 
 #### 👨‍💻 About
+
 - Professional journey timeline
 - Work experience with companies (Bevy Commerce, Softs.ai, IBOS Limited)
 - Skills categorized by expertise
@@ -48,6 +53,7 @@ Visit: [ridoy.dev](https://ridoy.dev)
 - International client experience (UAE, Netherlands, Singapore, Germany, Holland)
 
 #### 📝 Blog
+
 - Modern blog grid layout
 - Category filtering
 - Search functionality
@@ -55,12 +61,14 @@ Visit: [ridoy.dev](https://ridoy.dev)
 - Technical articles on React, Next.js, Shopify, Go, TypeScript, and more
 
 #### 🎨 Gallery
+
 - Visual portfolio showcase
 - Masonry layout for images and videos
 - Client testimonials from international clients
 - Project categories with filtering
 
 #### 📧 Contact
+
 - Professional contact form with validation
 - Multiple contact methods (Email, Phone, Location)
 - Social media links (GitHub, LinkedIn, Twitter, Telegram, WhatsApp, Discord)
@@ -70,6 +78,7 @@ Visit: [ridoy.dev](https://ridoy.dev)
 ## 🛠️ Tech Stack
 
 ### Frontend
+
 - **Framework**: Next.js 16 (App Router)
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS 4
@@ -78,12 +87,14 @@ Visit: [ridoy.dev](https://ridoy.dev)
 - **UI Components**: Shadcn/ui
 
 ### Backend & Database (Ready for integration)
+
 - Node.js / Go / Python
 - PostgreSQL / MongoDB
 - Redis for caching
 - Prisma ORM
 
 ### DevOps
+
 - Docker
 - GitHub Actions
 - Vercel (deployment)
@@ -114,12 +125,14 @@ pnpm start
 ## 🎨 Customization
 
 ### Update Personal Info
+
 1. Edit `app/layout.tsx` for SEO metadata
 2. Update `components/navigation.tsx` for navigation links
 3. Modify `components/footer.tsx` for contact information
 4. Customize `app/page.tsx` for homepage content
 
 ### Add Projects
+
 Edit the `projects` array in `app/projects/page.tsx`:
 
 ```typescript
@@ -133,7 +146,9 @@ Edit the `projects` array in `app/projects/page.tsx`:
 ```
 
 ### Modify Colors
+
 Update color gradients in Tailwind classes:
+
 - `bg-linear-to-r from-blue-600 to-purple-600`
 - Customize in `app/globals.css`
 
@@ -166,6 +181,7 @@ Update color gradients in Tailwind classes:
 ## 🚀 Deployment
 
 ### Vercel (Recommended)
+
 ```bash
 # Install Vercel CLI
 npm i -g vercel
@@ -175,6 +191,7 @@ vercel
 ```
 
 ### Docker
+
 ```bash
 # Build image
 docker build -t portfolio .

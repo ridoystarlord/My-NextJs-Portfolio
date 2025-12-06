@@ -17,31 +17,36 @@ const journey = [
   {
     year: "2020",
     title: "Started Full Stack Development Journey",
-    description: "Began professional career as a full stack developer, mastering React, Node.js, and modern web technologies.",
+    description:
+      "Began professional career as a full stack developer, mastering React, Node.js, and modern web technologies.",
     icon: FaRocket,
   },
   {
     year: "2021",
     title: "Joined IBOS Limited",
-    description: "Worked on enterprise-level applications, gaining experience in scalable architecture and team collaboration.",
+    description:
+      "Worked on enterprise-level applications, gaining experience in scalable architecture and team collaboration.",
     icon: FaBriefcase,
   },
   {
     year: "2022",
     title: "Co-founded Softs.ai",
-    description: "Launched my own tech company, building innovative SaaS solutions for businesses worldwide.",
+    description:
+      "Launched my own tech company, building innovative SaaS solutions for businesses worldwide.",
     icon: FaLightbulb,
   },
   {
     year: "2023",
     title: "Specialized in Shopify Development",
-    description: "Became a Shopify expert, building custom apps and Hydrogen storefronts for e-commerce brands.",
+    description:
+      "Became a Shopify expert, building custom apps and Hydrogen storefronts for e-commerce brands.",
     icon: FaCode,
   },
   {
     year: "2024",
     title: "Full Stack Lead at Bevy Commerce",
-    description: "Leading full stack development initiatives while continuing to grow Softs.ai.",
+    description:
+      "Leading full stack development initiatives while continuing to grow Softs.ai.",
     icon: FaAward,
   },
 ];
@@ -52,31 +57,71 @@ const companies = [
     role: "Full Stack Developer",
     period: "2024 - Present",
     location: "Remote",
-    description: "Leading development of e-commerce solutions and platform integrations.",
+    description:
+      "Leading development of e-commerce solutions and platform integrations.",
   },
   {
     name: "Softs.ai",
     role: "Co-founder & CTO",
     period: "2022 - Present",
     location: "Bangladesh",
-    description: "Building innovative SaaS products including Retail Pilot, Accounting Pilot, and Message Pilot.",
+    description:
+      "Building innovative SaaS products including Retail Pilot, Accounting Pilot, and Message Pilot.",
   },
   {
     name: "IBOS Limited",
     role: "Full Stack Developer",
     period: "2021 - 2022",
     location: "Dhaka, Bangladesh",
-    description: "Developed enterprise applications for BRAC and international clients across UAE, Netherlands, Singapore, Germany, and Holland.",
+    description:
+      "Developed enterprise applications for BRAC and international clients across UAE, Netherlands, Singapore, Germany, and Holland.",
   },
 ];
 
 const skills = [
-  { category: "Frontend", items: ["React", "Next.js", "Remix", "TypeScript", "Tailwind CSS", "Framer Motion"] },
-  { category: "Backend", items: ["Node.js", "Go", "Python", "Express.js", "NestJS", "Go Fiber"] },
-  { category: "Database", items: ["PostgreSQL", "MongoDB", "Redis", "Prisma ORM", "Mongoose"] },
-  { category: "DevOps", items: ["Docker", "AWS", "Vercel", "GitHub Actions", "CI/CD Pipelines"] },
-  { category: "E-commerce", items: ["Shopify Apps", "Hydrogen", "Storefront API", "Admin API", "Polaris"] },
-  { category: "Other", items: ["REST APIs", "GraphQL", "Microservices", "Data Migration", "Agile/Scrum"] },
+  {
+    category: "Frontend",
+    items: [
+      "React",
+      "Next.js",
+      "Remix",
+      "TypeScript",
+      "Tailwind CSS",
+      "Framer Motion",
+    ],
+  },
+  {
+    category: "Backend",
+    items: ["Node.js", "Go", "Python", "Express.js", "NestJS", "Go Fiber"],
+  },
+  {
+    category: "Database",
+    items: ["PostgreSQL", "MongoDB", "Redis", "Prisma ORM", "Mongoose"],
+  },
+  {
+    category: "DevOps",
+    items: ["Docker", "AWS", "Vercel", "GitHub Actions", "CI/CD Pipelines"],
+  },
+  {
+    category: "E-commerce",
+    items: [
+      "Shopify Apps",
+      "Hydrogen",
+      "Storefront API",
+      "Admin API",
+      "Polaris",
+    ],
+  },
+  {
+    category: "Other",
+    items: [
+      "REST APIs",
+      "GraphQL",
+      "Microservices",
+      "Data Migration",
+      "Agile/Scrum",
+    ],
+  },
 ];
 
 const achievements = [
@@ -92,7 +137,7 @@ export default function AboutPage() {
       {/* Hero Section */}
       <section className="relative overflow-hidden mb-20">
         <div className="absolute inset-0 bg-linear-to-br from-blue-50 via-purple-50 to-pink-50 dark:from-gray-900 dark:via-purple-900/20 dark:to-pink-900/20 -z-10" />
-        
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
@@ -109,21 +154,23 @@ export default function AboutPage() {
               >
                 About Me
               </motion.span>
-              
+
               <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6">
                 <span className="bg-linear-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
                   Mehedi Hasan Ridoy
                 </span>
               </h1>
-              
+
               <p className="text-2xl text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
                 Full Stack Developer & Entrepreneur
               </p>
-              
+
               <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed mb-8">
-                I&apos;m a passionate full stack developer with 4+ years of experience building world-class 
-                web applications. As Co-founder & CTO of Softs.ai and Full Stack Developer at Bevy Commerce, 
-                I specialize in creating scalable solutions using React, Next.js, Node.js, Go, and Shopify.
+                I&apos;m a passionate full stack developer with 4+ years of
+                experience building world-class web applications. As Co-founder
+                & CTO of Softs.ai and Full Stack Developer at Bevy Commerce, I
+                specialize in creating scalable solutions using React, Next.js,
+                Node.js, Go, and Shopify.
               </p>
 
               <div className="flex flex-wrap gap-4">
@@ -209,13 +256,27 @@ export default function AboutPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
-                  className={`flex items-center ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'}`}
+                  className={`flex items-center ${
+                    index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
+                  }`}
                 >
-                  <div className={`flex-1 ${index % 2 === 0 ? 'lg:text-right lg:pr-12' : 'lg:text-left lg:pl-12'}`}>
+                  <div
+                    className={`flex-1 ${
+                      index % 2 === 0
+                        ? "lg:text-right lg:pr-12"
+                        : "lg:text-left lg:pl-12"
+                    }`}
+                  >
                     <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg">
-                      <div className="text-blue-600 font-bold text-xl mb-2">{item.year}</div>
-                      <h3 className="text-2xl font-bold mb-2 text-gray-900 dark:text-white">{item.title}</h3>
-                      <p className="text-gray-600 dark:text-gray-400">{item.description}</p>
+                      <div className="text-blue-600 font-bold text-xl mb-2">
+                        {item.year}
+                      </div>
+                      <h3 className="text-2xl font-bold mb-2 text-gray-900 dark:text-white">
+                        {item.title}
+                      </h3>
+                      <p className="text-gray-600 dark:text-gray-400">
+                        {item.description}
+                      </p>
                     </div>
                   </div>
 
@@ -263,15 +324,25 @@ export default function AboutPage() {
               >
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                   <div>
-                    <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">{company.name}</h3>
-                    <p className="text-lg text-blue-600 dark:text-blue-400 font-semibold">{company.role}</p>
+                    <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
+                      {company.name}
+                    </h3>
+                    <p className="text-lg text-blue-600 dark:text-blue-400 font-semibold">
+                      {company.role}
+                    </p>
                   </div>
                   <div className="mt-4 md:mt-0 text-left md:text-right">
-                    <p className="text-gray-600 dark:text-gray-400 font-medium">{company.period}</p>
-                    <p className="text-gray-500 dark:text-gray-500">{company.location}</p>
+                    <p className="text-gray-600 dark:text-gray-400 font-medium">
+                      {company.period}
+                    </p>
+                    <p className="text-gray-500 dark:text-gray-500">
+                      {company.location}
+                    </p>
                   </div>
                 </div>
-                <p className="text-gray-600 dark:text-gray-400 leading-relaxed">{company.description}</p>
+                <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+                  {company.description}
+                </p>
               </motion.div>
             ))}
           </div>
@@ -307,7 +378,9 @@ export default function AboutPage() {
                 transition={{ delay: index * 0.1 }}
                 className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg"
               >
-                <h3 className="text-xl font-bold mb-4 text-gray-900 dark:text-white">{skillGroup.category}</h3>
+                <h3 className="text-xl font-bold mb-4 text-gray-900 dark:text-white">
+                  {skillGroup.category}
+                </h3>
                 <div className="flex flex-wrap gap-2">
                   {skillGroup.items.map((skill) => (
                     <span
@@ -327,7 +400,7 @@ export default function AboutPage() {
       {/* CTA Section */}
       <section className="mt-20 relative overflow-hidden">
         <div className="absolute inset-0 bg-linear-to-br from-blue-600 via-purple-600 to-pink-600 -z-10" />
-        
+
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -339,7 +412,8 @@ export default function AboutPage() {
               Let&apos;s Work Together
             </h2>
             <p className="text-xl text-white/90 mb-8">
-              I&apos;m always interested in hearing about new projects and opportunities.
+              I&apos;m always interested in hearing about new projects and
+              opportunities.
             </p>
             <Link href="/contact">
               <motion.button
