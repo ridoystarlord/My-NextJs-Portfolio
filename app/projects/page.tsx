@@ -53,7 +53,7 @@ const projects = [
       { icon: SiPrisma, name: "Prisma" },
       { icon: SiTailwindcss, name: "Tailwind" },
     ],
-    gradient: "from-blue-600 via-purple-600 to-pink-600",
+    gradient: "from-emerald-600 via-cyan-600 to-teal-600",
     icon: FaBolt,
     demoUrl: "https://retailpilot.demo",
     caseStudyUrl: "#",
@@ -107,7 +107,7 @@ const projects = [
       { icon: SiDocker, name: "Docker" },
       { icon: SiGraphql, name: "GraphQL" },
     ],
-    gradient: "from-purple-600 via-pink-600 to-red-600",
+    gradient: "from-cyan-600 via-teal-600 to-red-600",
     icon: FaCog,
     demoUrl: "https://messagepilot.demo",
     caseStudyUrl: "#",
@@ -185,7 +185,7 @@ const projects = [
       { icon: SiGraphql, name: "GraphQL" },
       { icon: SiTypescript, name: "TypeScript" },
     ],
-    gradient: "from-indigo-600 via-purple-600 to-pink-600",
+    gradient: "from-emerald-600 via-cyan-600 to-teal-600",
     icon: FaStore,
     demoUrl: "https://hydrogen-demo.myshopify.com",
     caseStudyUrl: "#",
@@ -210,7 +210,7 @@ const projects = [
       { icon: SiRedis, name: "Redis" },
       { icon: SiDocker, name: "Docker" },
     ],
-    gradient: "from-cyan-500 via-blue-500 to-indigo-500",
+    gradient: "from-cyan-500 via-emerald-500 to-teal-500",
     icon: FaChartBar,
     demoUrl: "https://analytics-demo.com",
     caseStudyUrl: "#",
@@ -248,7 +248,7 @@ export default function ProjectsPage() {
     <div className="min-h-screen pt-32 pb-20">
       {/* Hero Section */}
       <section className="relative overflow-hidden mb-20">
-        <div className="absolute inset-0 bg-linear-to-br from-blue-50 via-purple-50 to-pink-50 dark:from-gray-900 dark:via-purple-900/20 dark:to-pink-900/20 -z-10" />
+        <div className="absolute inset-0 bg-linear-to-br from-emerald-50 via-cyan-50 to-teal-50 dark:from-gray-900 dark:via-purple-900/20 dark:to-pink-900/20 -z-10" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -261,13 +261,13 @@ export default function ProjectsPage() {
               initial={{ opacity: 0, scale: 0.5 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.2 }}
-              className="inline-block px-4 py-2 bg-linear-to-r from-blue-600 to-purple-600 text-white rounded-full text-sm font-medium shadow-lg mb-6"
+              className="inline-block px-4 py-2 bg-linear-to-r from-emerald-600 to-teal-600 text-white rounded-full text-sm font-medium shadow-lg mb-6"
             >
               Portfolio Showcase
             </motion.span>
 
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6">
-              <span className="bg-linear-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+              <span className="bg-linear-to-r from-emerald-600 via-cyan-600 to-teal-600 bg-clip-text text-transparent">
                 Featured Projects
               </span>
             </h1>
@@ -292,10 +292,10 @@ export default function ProjectsPage() {
             viewport={{ once: true }}
             className="text-3xl font-bold mb-8 flex items-center"
           >
-            <span className="bg-linear-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">
               Featured Projects
             </span>
-            <span className="ml-4 h-1 grow bg-linear-to-r from-blue-600 to-transparent rounded" />
+            <span className="ml-4 h-1 grow bg-linear-to-r from-emerald-600 to-transparent rounded" />
           </motion.h2>
 
           <div className="grid lg:grid-cols-1 gap-8">
@@ -387,7 +387,7 @@ export default function ProjectsPage() {
                               <motion.button
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
-                                className="px-6 py-3 bg-linear-to-r from-blue-600 to-purple-600 text-white rounded-full font-semibold flex items-center space-x-2 shadow-lg hover:shadow-xl transition-all"
+                                className="px-6 py-3 bg-linear-to-r from-emerald-600 to-teal-600 text-white rounded-full font-semibold flex items-center space-x-2 shadow-lg hover:shadow-xl transition-all"
                               >
                                 <FaExternalLinkAlt />
                                 <span>View Demo</span>
@@ -423,10 +423,10 @@ export default function ProjectsPage() {
             viewport={{ once: true }}
             className="text-3xl font-bold mb-8 flex items-center"
           >
-            <span className="bg-linear-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-cyan-600 to-teal-600 bg-clip-text text-transparent">
               Other Projects
             </span>
-            <span className="ml-4 h-1 grow bg-linear-to-r from-purple-600 to-transparent rounded" />
+            <span className="ml-4 h-1 grow bg-linear-to-r from-cyan-600 to-transparent rounded" />
           </motion.h2>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -496,7 +496,7 @@ export default function ProjectsPage() {
                             <motion.button
                               whileHover={{ scale: 1.03 }}
                               whileTap={{ scale: 0.97 }}
-                              className="w-full px-4 py-2 bg-linear-to-r from-blue-600 to-purple-600 text-white rounded-full font-medium text-sm flex items-center justify-center space-x-2 shadow-md hover:shadow-lg transition-all"
+                              className="w-full px-4 py-2 bg-linear-to-r from-emerald-600 to-teal-600 text-white rounded-full font-medium text-sm flex items-center justify-center space-x-2 shadow-md hover:shadow-lg transition-all"
                             >
                               <FaExternalLinkAlt className="text-xs" />
                               <span>Demo</span>
@@ -530,7 +530,7 @@ export default function ProjectsPage() {
 
       {/* CTA Section */}
       <section className="mt-32 relative overflow-hidden">
-        <div className="absolute inset-0 bg-linear-to-br from-blue-600 via-purple-600 to-pink-600 -z-10" />
+        <div className="absolute inset-0 bg-linear-to-br from-emerald-600 via-cyan-600 to-teal-600 -z-10" />
 
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center relative z-10">
           <motion.div

@@ -52,7 +52,7 @@ export default function Navigation() {
             <motion.div
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="text-2xl font-bold bg-linear-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent"
+              className="text-2xl font-bold bg-linear-to-r from-emerald-600 via-cyan-600 to-teal-600 bg-clip-text text-transparent"
             >
               Ridoy.dev
             </motion.div>
@@ -72,7 +72,7 @@ export default function Navigation() {
                     whileHover={{ y: -2 }}
                     className={`px-4 py-2 rounded-lg transition-all ${
                       pathname === link.href
-                        ? "bg-linear-to-r from-blue-600 to-purple-600 text-white shadow-lg"
+                        ? "bg-linear-to-r from-emerald-600 to-teal-600 text-white shadow-lg"
                         : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-white/10"
                     }`}
                   >
@@ -89,10 +89,10 @@ export default function Navigation() {
               <motion.button
                 whileHover={{
                   scale: 1.05,
-                  boxShadow: "0 10px 40px rgba(139, 92, 246, 0.3)",
+                  boxShadow: "0 10px 40px rgba(20, 184, 166, 0.3)",
                 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-6 py-2.5 bg-linear-to-r from-blue-600 to-purple-600 text-white rounded-full font-medium shadow-lg hover:shadow-xl transition-all"
+                className="px-6 py-2.5 bg-linear-to-r from-emerald-600 to-teal-600 text-white rounded-full font-medium shadow-lg hover:shadow-xl transition-all"
               >
                 Let&apos;s Talk
               </motion.button>
@@ -133,7 +133,7 @@ export default function Navigation() {
                     <div
                       className={`block px-4 py-3 rounded-lg transition-all ${
                         pathname === link.href
-                          ? "bg-linear-to-r from-blue-600 to-purple-600 text-white shadow-lg"
+                          ? "bg-linear-to-r from-emerald-600 to-teal-600 text-white shadow-lg"
                           : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-white/10"
                       }`}
                     >
@@ -148,7 +148,7 @@ export default function Navigation() {
                 transition={{ delay: navLinks.length * 0.05 }}
               >
                 <Link href="/contact">
-                  <button className="w-full px-6 py-3 bg-linear-to-r from-blue-600 to-purple-600 text-white rounded-lg font-medium shadow-lg">
+                  <button className="w-full px-6 py-3 bg-linear-to-r from-emerald-600 to-teal-600 text-white rounded-lg font-medium shadow-lg">
                     Let&apos;s Talk
                   </button>
                 </Link>

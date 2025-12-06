@@ -16,37 +16,37 @@ import {
 const journey = [
   {
     year: "2020",
-    title: "Started Full Stack Development Journey",
+    title: "Started Backend Development Journey",
     description:
-      "Began professional career as a full stack developer, mastering React, Node.js, and modern web technologies.",
+      "Began learning backend development, focusing on server-side architecture, databases, and API design.",
     icon: FaRocket,
   },
   {
     year: "2021",
-    title: "Joined IBOS Limited",
+    title: "Joined Workspace Infotech Limited",
     description:
-      "Worked on enterprise-level applications, gaining experience in scalable architecture and team collaboration.",
+      "Started professional career as Junior Software Engineer, working on enterprise-level backend systems and scalable architecture.",
     icon: FaBriefcase,
   },
   {
     year: "2022",
-    title: "Co-founded Softs.ai",
+    title: "Grew as Backend Specialist",
     description:
-      "Launched my own tech company, building innovative SaaS solutions for businesses worldwide.",
-    icon: FaLightbulb,
-  },
-  {
-    year: "2023",
-    title: "Specialized in Shopify Development",
-    description:
-      "Became a Shopify expert, building custom apps and Hydrogen storefronts for e-commerce brands.",
+      "Deepened expertise in NestJS, Go, microservices architecture, and message queues (BullMQ, RabbitMQ).",
     icon: FaCode,
   },
   {
-    year: "2024",
-    title: "Full Stack Lead at Bevy Commerce",
+    year: "2023",
+    title: "Joined Bevy Commerce",
     description:
-      "Leading full stack development initiatives while continuing to grow Softs.ai.",
+      "Started as Full Stack Developer, designing and implementing backend architecture for e-commerce platforms.",
+    icon: FaLightbulb,
+  },
+  {
+    year: "2024",
+    title: "Co-founded Softs.ai",
+    description:
+      "Launched tech startup as Co-founder & CTO, building innovative SaaS products with focus on backend architecture and scalability.",
     icon: FaAward,
   },
 ];
@@ -55,26 +55,34 @@ const companies = [
   {
     name: "Bevy Commerce",
     role: "Full Stack Developer",
-    period: "2024 - Present",
+    period: "April 2023 - Present",
     location: "Remote",
     description:
-      "Leading development of e-commerce solutions and platform integrations.",
+      "Designing and implementing scalable backend architecture for e-commerce solutions. Working with NestJS, Go, PostgreSQL, and microservices.",
   },
   {
     name: "Softs.ai",
     role: "Co-founder & CTO",
-    period: "2022 - Present",
+    period: "January 2024 - Present",
     location: "Bangladesh",
     description:
-      "Building innovative SaaS products including Retail Pilot, Accounting Pilot, and Message Pilot.",
+      "Building innovative SaaS products including Retail Pilot, Accounting Pilot, and Message Pilot. Leading backend architecture design, database modeling, and system scalability.",
+  },
+  {
+    name: "Workspace Infotech Limited",
+    role: "Junior Software Engineer",
+    period: "August 2021 - April 2023",
+    location: "Dhaka, Bangladesh",
+    description:
+      "Started professional career developing backend systems and APIs. Gained experience in scalable architecture and enterprise applications.",
   },
   {
     name: "IBOS Limited",
-    role: "Full Stack Developer",
+    role: "Freelance Backend Developer",
     period: "2021 - 2022",
-    location: "Dhaka, Bangladesh",
+    location: "Remote",
     description:
-      "Developed enterprise applications for BRAC and international clients across UAE, Netherlands, Singapore, Germany, and Holland.",
+      "Freelance projects for BRAC and international clients across UAE, Netherlands, Singapore, Germany, and Holland.",
   },
 ];
 
@@ -92,7 +100,11 @@ const skills = [
   },
   {
     category: "Backend",
-    items: ["Node.js", "Go", "Python", "Express.js", "NestJS", "Go Fiber"],
+    items: ["Node.js", "Go", "NestJS", "Go Fiber", "Express.js", "Python"],
+  },
+  {
+    category: "Message Queues",
+    items: ["BullMQ", "RabbitMQ", "Redis"],
   },
   {
     category: "Database",
@@ -136,7 +148,7 @@ export default function AboutPage() {
     <div className="min-h-screen pt-32 pb-20">
       {/* Hero Section */}
       <section className="relative overflow-hidden mb-20">
-        <div className="absolute inset-0 bg-linear-to-br from-blue-50 via-purple-50 to-pink-50 dark:from-gray-900 dark:via-purple-900/20 dark:to-pink-900/20 -z-10" />
+        <div className="absolute inset-0 bg-linear-to-br from-emerald-50 via-cyan-50 to-teal-50 dark:from-gray-900 dark:via-purple-900/20 dark:to-pink-900/20 -z-10" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -150,13 +162,13 @@ export default function AboutPage() {
                 initial={{ opacity: 0, scale: 0.5 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.2 }}
-                className="inline-block px-4 py-2 bg-linear-to-r from-blue-600 to-purple-600 text-white rounded-full text-sm font-medium shadow-lg mb-6"
+                className="inline-block px-4 py-2 bg-linear-to-r from-emerald-600 to-teal-600 text-white rounded-full text-sm font-medium shadow-lg mb-6"
               >
                 About Me
               </motion.span>
 
               <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6">
-                <span className="bg-linear-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+                <span className="bg-linear-to-r from-emerald-600 via-cyan-600 to-teal-600 bg-clip-text text-transparent">
                   Mehedi Hasan Ridoy
                 </span>
               </h1>
@@ -178,7 +190,7 @@ export default function AboutPage() {
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="px-8 py-4 bg-linear-to-r from-blue-600 to-purple-600 text-white rounded-full font-semibold text-lg shadow-xl hover:shadow-2xl transition-all"
+                    className="px-8 py-4 bg-linear-to-r from-emerald-600 to-teal-600 text-white rounded-full font-semibold text-lg shadow-xl hover:shadow-2xl transition-all"
                   >
                     Get In Touch
                   </motion.button>
@@ -212,7 +224,7 @@ export default function AboutPage() {
                   className="bg-white dark:bg-gray-800 rounded-3xl p-8 shadow-xl text-center"
                 >
                   <achievement.icon className="text-4xl mx-auto mb-4 text-blue-600" />
-                  <div className="text-4xl font-bold bg-linear-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-2">
+                  <div className="text-4xl font-bold bg-linear-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent mb-2">
                     {achievement.number}
                   </div>
                   <div className="text-gray-600 dark:text-gray-400 font-medium">
@@ -235,7 +247,7 @@ export default function AboutPage() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl sm:text-5xl font-bold mb-4">
-              <span className="bg-linear-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+              <span className="bg-linear-to-r from-emerald-600 via-cyan-600 to-teal-600 bg-clip-text text-transparent">
                 My Journey
               </span>
             </h2>
@@ -246,7 +258,7 @@ export default function AboutPage() {
 
           <div className="relative">
             {/* Timeline Line */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-linear-to-b from-blue-600 via-purple-600 to-pink-600 hidden lg:block" />
+            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-linear-to-b from-emerald-600 via-cyan-600 to-teal-600 hidden lg:block" />
 
             <div className="space-y-12">
               {journey.map((item, index) => (
@@ -280,7 +292,7 @@ export default function AboutPage() {
                     </div>
                   </div>
 
-                  <div className="hidden lg:flex w-16 h-16 bg-linear-to-br from-blue-600 to-purple-600 rounded-full items-center justify-center shadow-lg relative z-10 shrink-0">
+                  <div className="hidden lg:flex w-16 h-16 bg-linear-to-br from-emerald-600 to-teal-600 rounded-full items-center justify-center shadow-lg relative z-10 shrink-0">
                     <item.icon className="text-white text-2xl" />
                   </div>
 
@@ -302,7 +314,7 @@ export default function AboutPage() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl sm:text-5xl font-bold mb-4">
-              <span className="bg-linear-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+              <span className="bg-linear-to-r from-emerald-600 via-cyan-600 to-teal-600 bg-clip-text text-transparent">
                 Work Experience
               </span>
             </h2>
@@ -359,7 +371,7 @@ export default function AboutPage() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl sm:text-5xl font-bold mb-4">
-              <span className="bg-linear-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+              <span className="bg-linear-to-r from-emerald-600 via-cyan-600 to-teal-600 bg-clip-text text-transparent">
                 Skills & Technologies
               </span>
             </h2>
@@ -385,7 +397,7 @@ export default function AboutPage() {
                   {skillGroup.items.map((skill) => (
                     <span
                       key={skill}
-                      className="px-3 py-1 bg-linear-to-r from-blue-100 to-purple-100 dark:from-blue-900/30 dark:to-purple-900/30 text-gray-700 dark:text-gray-300 rounded-full text-sm font-medium"
+                      className="px-3 py-1 bg-linear-to-r from-emerald-100 to-teal-100 dark:from-blue-900/30 dark:to-purple-900/30 text-gray-700 dark:text-gray-300 rounded-full text-sm font-medium"
                     >
                       {skill}
                     </span>
@@ -399,7 +411,7 @@ export default function AboutPage() {
 
       {/* CTA Section */}
       <section className="mt-20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-linear-to-br from-blue-600 via-purple-600 to-pink-600 -z-10" />
+        <div className="absolute inset-0 bg-linear-to-br from-emerald-600 via-cyan-600 to-teal-600 -z-10" />
 
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center relative z-10">
           <motion.div

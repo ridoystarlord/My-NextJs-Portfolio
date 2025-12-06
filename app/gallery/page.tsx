@@ -11,7 +11,7 @@ const galleryItems = [
     title: "Modern Dashboard Design",
     category: "UI/UX",
     thumbnail: "🎨",
-    gradient: "from-blue-500 to-purple-600",
+    gradient: "from-emerald-500 to-teal-600",
   },
   {
     id: 2,
@@ -27,7 +27,7 @@ const galleryItems = [
     title: "App Demo Walkthrough",
     category: "Product Demo",
     thumbnail: "🎬",
-    gradient: "from-purple-500 to-pink-600",
+    gradient: "from-cyan-500 to-teal-600",
   },
   {
     id: 4,
@@ -51,7 +51,7 @@ const galleryItems = [
     title: "Development Process",
     category: "Behind the Scenes",
     thumbnail: "⚙️",
-    gradient: "from-indigo-500 to-purple-600",
+    gradient: "from-emerald-500 to-teal-600",
   },
 ];
 
@@ -133,7 +133,7 @@ export default function GalleryPage() {
     <div className="min-h-screen pt-32 pb-20">
       {/* Hero Section */}
       <section className="relative overflow-hidden mb-20">
-        <div className="absolute inset-0 bg-linear-to-br from-blue-50 via-purple-50 to-pink-50 dark:from-gray-900 dark:via-purple-900/20 dark:to-pink-900/20 -z-10" />
+        <div className="absolute inset-0 bg-linear-to-br from-emerald-50 via-cyan-50 to-teal-50 dark:from-gray-900 dark:via-purple-900/20 dark:to-pink-900/20 -z-10" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -146,13 +146,13 @@ export default function GalleryPage() {
               initial={{ opacity: 0, scale: 0.5 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.2 }}
-              className="inline-block px-4 py-2 bg-linear-to-r from-blue-600 to-purple-600 text-white rounded-full text-sm font-medium shadow-lg mb-6"
+              className="inline-block px-4 py-2 bg-linear-to-r from-emerald-600 to-teal-600 text-white rounded-full text-sm font-medium shadow-lg mb-6"
             >
               Visual Portfolio
             </motion.span>
 
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6">
-              <span className="bg-linear-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+              <span className="bg-linear-to-r from-emerald-600 via-cyan-600 to-teal-600 bg-clip-text text-transparent">
                 Gallery & Testimonials
               </span>
             </h1>
@@ -180,7 +180,7 @@ export default function GalleryPage() {
               onClick={() => setSelectedCategory(category)}
               className={`px-6 py-2 rounded-full font-medium transition-all ${
                 selectedCategory === category
-                  ? "bg-linear-to-r from-blue-600 to-purple-600 text-white shadow-lg"
+                  ? "bg-linear-to-r from-emerald-600 to-teal-600 text-white shadow-lg"
                   : "bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
               }`}
             >
@@ -242,7 +242,7 @@ export default function GalleryPage() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl sm:text-5xl font-bold mb-4">
-              <span className="bg-linear-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+              <span className="bg-linear-to-r from-emerald-600 via-cyan-600 to-teal-600 bg-clip-text text-transparent">
                 Client Testimonials
               </span>
             </h2>
@@ -281,7 +281,7 @@ export default function GalleryPage() {
 
                 {/* Author */}
                 <div className="flex items-center space-x-4 relative z-10">
-                  <div className="w-12 h-12 bg-linear-to-br from-blue-600 to-purple-600 rounded-full flex items-center justify-center text-2xl">
+                  <div className="w-12 h-12 bg-linear-to-br from-emerald-600 to-teal-600 rounded-full flex items-center justify-center text-2xl">
                     {testimonial.avatar}
                   </div>
                   <div>

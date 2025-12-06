@@ -42,9 +42,9 @@ export default function Footer() {
     <footer className="relative bg-linear-to-br from-gray-900 via-gray-800 to-black text-white overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-0 -left-4 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl animate-blob" />
-        <div className="absolute top-0 -right-4 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-2000" />
-        <div className="absolute -bottom-8 left-20 w-72 h-72 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-4000" />
+        <div className="absolute top-0 -left-4 w-72 h-72 bg-cyan-500 rounded-full mix-blend-multiply filter blur-xl animate-blob" />
+        <div className="absolute top-0 -right-4 w-72 h-72 bg-emerald-500 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-2000" />
+        <div className="absolute -bottom-8 left-20 w-72 h-72 bg-teal-500 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-4000" />
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -56,15 +56,16 @@ export default function Footer() {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <h3 className="text-3xl font-bold bg-linear-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-4">
+            <h3 className="text-3xl font-bold bg-linear-to-r from-emerald-400 via-cyan-400 to-teal-400 bg-clip-text text-transparent mb-4">
               Ridoy.dev
             </h3>
             <p className="text-gray-300 mb-4 leading-relaxed">
               Co-founder & CTO of Softs.ai. Full Stack Developer at Bevy
-              Commerce. Building world-class web applications.
+              Commerce. Specializing in backend architecture, databases, and
+              scalable systems.
             </p>
             <div className="flex items-center space-x-4 text-2xl">
-              <SiReact className="text-blue-400" />
+              <SiReact className="text-emerald-400" />
               <SiNextdotjs className="text-white" />
               <SiShopify className="text-green-400" />
             </div>
@@ -83,7 +84,7 @@ export default function Footer() {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-gray-300 hover:text-blue-400 transition-colors duration-200 hover:translate-x-1 inline-block"
+                    className="text-gray-300 hover:text-emerald-400 transition-colors duration-200 hover:translate-x-1 inline-block"
                   >
                     {link.name}
                   </Link>
@@ -105,7 +106,7 @@ export default function Footer() {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-gray-300 hover:text-purple-400 transition-colors duration-200 hover:translate-x-1 inline-block"
+                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 hover:translate-x-1 inline-block"
                   >
                     {link.name}
                   </Link>
@@ -124,7 +125,7 @@ export default function Footer() {
             <h4 className="text-lg font-semibold mb-4">Get in Touch</h4>
             <ul className="space-y-3">
               <li className="flex items-center space-x-3 text-gray-300">
-                <FaEnvelope className="text-blue-400" />
+                <FaEnvelope className="text-emerald-400" />
                 <span>hello@ridoy.dev</span>
               </li>
               <li className="flex items-center space-x-3 text-gray-300">
@@ -147,7 +148,7 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.2, rotate: 5 }}
                   whileTap={{ scale: 0.9 }}
-                  className="w-10 h-10 bg-linear-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white hover:shadow-lg hover:shadow-purple-500/50 transition-all"
+                  className="w-10 h-10 bg-linear-to-br from-emerald-500 to-teal-600 rounded-full flex items-center justify-center text-white hover:shadow-lg hover:shadow-teal-500/50 transition-all"
                   aria-label={social.label}
                 >
                   <social.icon className="text-lg" />
