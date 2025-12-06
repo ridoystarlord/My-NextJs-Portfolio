@@ -1,36 +1,199 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Mehedi Hasan Ridoy - Portfolio Website
 
-## Getting Started
+A modern, professional portfolio website built with Next.js 16, TypeScript, Tailwind CSS, and Framer Motion.
 
-First, run the development server:
+## 🚀 Live Demo
+
+Visit: [ridoy.dev](https://ridoy.dev)
+
+## ✨ Features
+
+### Design & UX
+- **Modern & Colorful Design**: Eye-catching gradients, glass-morphism effects, and professional layouts
+- **Smooth Animations**: Powered by Framer Motion for fluid page transitions and interactions
+- **Fully Responsive**: Optimized for all devices from mobile to desktop
+- **Dark Mode Ready**: Beautiful color schemes for both light and dark themes
+- **Fast Loading**: Server-side rendering and optimized assets for blazing-fast performance
+
+### Pages
+
+#### 🏠 Home
+- Impressive hero section with animated gradient backgrounds
+- Statistics showcase (years of experience, projects completed, clients served)
+- Interactive tech stack display with 19+ technologies
+- Agile methodology section explaining development process
+- Featured projects carousel
+- Call-to-action section
+
+#### 💼 Projects
+- Featured projects with detailed descriptions
+- Tech stack badges for each project
+- Live demo links and case studies
+- Varied layouts (grid and featured cards)
+- Project categories: SaaS, Shopify Apps, E-commerce, Backend
+
+**Showcased Projects:**
+- Retail Pilot (POS System)
+- Accounting Pilot (Accounting Software)
+- Message Pilot (Omnichannel Messaging)
+- Sender Bee (Email Marketing)
+- Shopify Apps & Hydrogen Stores
+- Custom Backend Solutions
+
+#### 👨‍💻 About
+- Professional journey timeline
+- Work experience with companies (Bevy Commerce, Softs.ai, IBOS Limited)
+- Skills categorized by expertise
+- Achievement statistics
+- International client experience (UAE, Netherlands, Singapore, Germany, Holland)
+
+#### 📝 Blog
+- Modern blog grid layout
+- Category filtering
+- Search functionality
+- Read time estimates
+- Technical articles on React, Next.js, Shopify, Go, TypeScript, and more
+
+#### 🎨 Gallery
+- Visual portfolio showcase
+- Masonry layout for images and videos
+- Client testimonials from international clients
+- Project categories with filtering
+
+#### 📧 Contact
+- Professional contact form with validation
+- Multiple contact methods (Email, Phone, Location)
+- Social media links (GitHub, LinkedIn, Twitter, Telegram, WhatsApp, Discord)
+- FAQ section
+- Quick response information
+
+## 🛠️ Tech Stack
+
+### Frontend
+- **Framework**: Next.js 16 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS 4
+- **Animations**: Framer Motion
+- **Icons**: React Icons
+- **UI Components**: Shadcn/ui
+
+### Backend & Database (Ready for integration)
+- Node.js / Go / Python
+- PostgreSQL / MongoDB
+- Redis for caching
+- Prisma ORM
+
+### DevOps
+- Docker
+- GitHub Actions
+- Vercel (deployment)
+- AWS (optional)
+
+## 📦 Installation
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+# Clone the repository
+git clone https://github.com/ridoy/portfolio.git
+
+# Navigate to project directory
+cd portfolio
+
+# Install dependencies
+pnpm install
+
+# Run development server
 pnpm dev
-# or
-bun dev
+
+# Build for production
+pnpm build
+
+# Start production server
+pnpm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🎨 Customization
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Update Personal Info
+1. Edit `app/layout.tsx` for SEO metadata
+2. Update `components/navigation.tsx` for navigation links
+3. Modify `components/footer.tsx` for contact information
+4. Customize `app/page.tsx` for homepage content
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Add Projects
+Edit the `projects` array in `app/projects/page.tsx`:
 
-## Learn More
+```typescript
+{
+  title: "Your Project",
+  description: "Project description",
+  tech: [{ icon: SiReact, name: "React" }],
+  gradient: "from-blue-600 to-purple-600",
+  demoUrl: "https://demo.com",
+}
+```
 
-To learn more about Next.js, take a look at the following resources:
+### Modify Colors
+Update color gradients in Tailwind classes:
+- `bg-linear-to-r from-blue-600 to-purple-600`
+- Customize in `app/globals.css`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📱 Pages Structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+/                   - Homepage with hero, tech stack, agile process
+/projects          - Portfolio projects showcase
+/about             - Professional journey and experience
+/blog              - Technical articles and tutorials
+/gallery           - Visual portfolio and testimonials
+/contact           - Contact form and social links
+```
 
-## Deploy on Vercel
+## 🎯 Key Features Implemented
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- ✅ Modern gradient-based design
+- ✅ Smooth Framer Motion animations
+- ✅ Responsive navigation with mobile menu
+- ✅ Interactive project cards
+- ✅ Agile methodology showcase
+- ✅ Tech stack with 19+ technologies
+- ✅ Professional footer with social links
+- ✅ Contact form with validation
+- ✅ Blog with search and filters
+- ✅ Gallery with testimonials
+- ✅ SEO optimized metadata
+- ✅ Fast loading with SSR
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🚀 Deployment
+
+### Vercel (Recommended)
+```bash
+# Install Vercel CLI
+npm i -g vercel
+
+# Deploy
+vercel
+```
+
+### Docker
+```bash
+# Build image
+docker build -t portfolio .
+
+# Run container
+docker run -p 3000:3000 portfolio
+```
+
+## 📄 License
+
+MIT License - feel free to use this portfolio as inspiration for your own!
+
+## 🤝 Connect
+
+- **Email**: hello@ridoy.dev
+- **GitHub**: [@ridoy](https://github.com/ridoy)
+- **LinkedIn**: [Mehedi Hasan Ridoy](https://linkedin.com/in/ridoy)
+- **Website**: [ridoy.dev](https://ridoy.dev)
+
+---
+
+Built with ❤️ by Mehedi Hasan Ridoy
