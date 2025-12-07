@@ -53,7 +53,7 @@ const projects = [
       { icon: SiPrisma, name: "Prisma" },
       { icon: SiTailwindcss, name: "Tailwind" },
     ],
-    gradient: "from-blue-600 via-purple-600 to-pink-600",
+    gradient: "bg-brand-gradient-full",
     icon: FaBolt,
     demoUrl: "https://retailpilot.demo",
     caseStudyUrl: "#",
@@ -261,15 +261,13 @@ export default function ProjectsPage() {
               initial={{ opacity: 0, scale: 0.5 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.2 }}
-              className="inline-block px-4 py-2 bg-linear-to-r from-blue-600 to-purple-600 text-white rounded-full text-sm font-medium shadow-lg mb-6"
+              className="inline-block px-4 py-2 bg-brand-gradient text-white rounded-full text-sm font-medium shadow-lg mb-6"
             >
               Portfolio Showcase
             </motion.span>
 
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6">
-              <span className="bg-linear-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
-                Featured Projects
-              </span>
+              <span className="text-brand-gradient">Featured Projects</span>
             </h1>
 
             <p className="text-xl text-gray-600 dark:text-gray-400 leading-relaxed">
@@ -292,10 +290,8 @@ export default function ProjectsPage() {
             viewport={{ once: true }}
             className="text-3xl font-bold mb-8 flex items-center"
           >
-            <span className="bg-linear-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              Featured Projects
-            </span>
-            <span className="ml-4 h-1 grow bg-linear-to-r from-blue-600 to-transparent rounded" />
+            <span className="text-brand-gradient">Featured Projects</span>
+            <span className="ml-4 h-1 grow bg-linear-to-r from-brand-primary to-transparent rounded" />
           </motion.h2>
 
           <div className="grid lg:grid-cols-1 gap-8">
@@ -387,7 +383,7 @@ export default function ProjectsPage() {
                               <motion.button
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
-                                className="px-6 py-3 bg-linear-to-r from-blue-600 to-purple-600 text-white rounded-full font-semibold flex items-center space-x-2 shadow-lg hover:shadow-xl transition-all"
+                                className="px-6 py-3 bg-brand-gradient text-white rounded-full font-semibold flex items-center space-x-2 shadow-lg hover:shadow-xl transition-all"
                               >
                                 <FaExternalLinkAlt />
                                 <span>View Demo</span>
@@ -423,10 +419,10 @@ export default function ProjectsPage() {
             viewport={{ once: true }}
             className="text-3xl font-bold mb-8 flex items-center"
           >
-            <span className="bg-linear-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+            <span className="from-brand-secondary to-brand-tertiary">
               Other Projects
             </span>
-            <span className="ml-4 h-1 grow bg-linear-to-r from-purple-600 to-transparent rounded" />
+            <span className="ml-4 h-1 grow bg-linear-to-r from-brand-secondary to-transparent rounded" />
           </motion.h2>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -496,7 +492,7 @@ export default function ProjectsPage() {
                             <motion.button
                               whileHover={{ scale: 1.03 }}
                               whileTap={{ scale: 0.97 }}
-                              className="w-full px-4 py-2 bg-linear-to-r from-blue-600 to-purple-600 text-white rounded-full font-medium text-sm flex items-center justify-center space-x-2 shadow-md hover:shadow-lg transition-all"
+                              className="w-full px-4 py-2 bg-brand-gradient text-white rounded-full font-medium text-sm flex items-center justify-center space-x-2 shadow-md hover:shadow-lg transition-all"
                             >
                               <FaExternalLinkAlt className="text-xs" />
                               <span>Demo</span>
@@ -530,7 +526,7 @@ export default function ProjectsPage() {
 
       {/* CTA Section */}
       <section className="mt-32 relative overflow-hidden">
-        <div className="absolute inset-0 bg-linear-to-br from-blue-600 via-purple-600 to-pink-600 -z-10" />
+        <div className="absolute inset-0 bg-brand-gradient-full -z-10" />
 
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center relative z-10">
           <motion.div
@@ -549,7 +545,7 @@ export default function ProjectsPage() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-10 py-4 bg-white text-purple-600 rounded-full font-bold text-lg shadow-2xl hover:shadow-3xl transition-all inline-flex items-center space-x-2"
+                className="px-10 py-4 bg-white text-brand-secondary rounded-full font-bold text-lg shadow-2xl hover:shadow-3xl transition-all inline-flex items-center space-x-2"
               >
                 <span>Start a Project</span>
                 <FaExternalLinkAlt />

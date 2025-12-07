@@ -120,15 +120,13 @@ export default function BlogPage() {
               initial={{ opacity: 0, scale: 0.5 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.2 }}
-              className="inline-block px-4 py-2 bg-linear-to-r from-blue-600 to-purple-600 text-white rounded-full text-sm font-medium shadow-lg mb-6"
+              className="inline-block px-4 py-2 bg-brand-gradient text-white rounded-full text-sm font-medium shadow-lg mb-6"
             >
               Blog & Insights
             </motion.span>
 
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6">
-              <span className="bg-linear-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
-                Thoughts & Tutorials
-              </span>
+              <span className="text-brand-gradient">Thoughts & Tutorials</span>
             </h1>
 
             <p className="text-xl text-gray-600 dark:text-gray-400 leading-relaxed mb-8">
@@ -172,8 +170,8 @@ export default function BlogPage() {
               onClick={() => setSelectedCategory(category)}
               className={`px-6 py-2 rounded-full font-medium transition-all ${
                 selectedCategory === category
-                  ? "bg-linear-to-r from-blue-600 to-purple-600 text-white shadow-lg"
-                  : "bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
+                  ? "bg-brand-gradient text-white shadow-lg"
+                  : "bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600"
               }`}
             >
               {category}
@@ -224,7 +222,7 @@ export default function BlogPage() {
 
                     {/* Content */}
                     <div className="p-6 flex-1 flex flex-col">
-                      <h3 className="text-xl font-bold mb-3 text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                      <h3 className="text-xl font-bold mb-3 text-gray-900 dark:text-white group-hover:text-brand-primary dark:group-hover:text-blue-400 transition-colors">
                         {post.title}
                       </h3>
                       <p className="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed flex-1">
@@ -243,7 +241,7 @@ export default function BlogPage() {
                             <span>{post.readTime}</span>
                           </span>
                         </div>
-                        <FaArrowRight className="text-blue-600 group-hover:translate-x-2 transition-transform" />
+                        <FaArrowRight className="text-brand-primary group-hover:translate-x-2 transition-transform" />
                       </div>
                     </div>
                   </div>
@@ -256,7 +254,7 @@ export default function BlogPage() {
 
       {/* Newsletter CTA */}
       <section className="mt-32 relative overflow-hidden">
-        <div className="absolute inset-0 bg-linear-to-br from-blue-600 via-purple-600 to-pink-600 -z-10" />
+        <div className="absolute inset-0 bg-brand-gradient-full -z-10" />
 
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center relative z-10">
           <motion.div
@@ -280,7 +278,7 @@ export default function BlogPage() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-white text-purple-600 rounded-full font-bold shadow-2xl hover:shadow-3xl transition-all whitespace-nowrap"
+                className="px-8 py-4 bg-white text-brand-secondary rounded-full font-bold shadow-2xl hover:shadow-3xl transition-all whitespace-nowrap"
               >
                 Subscribe
               </motion.button>

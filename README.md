@@ -147,10 +147,40 @@ Edit the `projects` array in `app/projects/page.tsx`:
 
 ### Modify Colors
 
-Update color gradients in Tailwind classes:
+The entire website uses a centralized CSS variable system for easy color customization:
 
-- `bg-linear-to-r from-blue-600 to-purple-600`
-- Customize in `app/globals.css`
+**Location**: `app/globals.css` (lines ~76-95)
+
+```css
+/* Brand Colors - Change these to update colors across the entire site */
+--color-primary: #3b82f6; /* Blue - Primary actions */
+--color-secondary: #8b5cf6; /* Purple - Secondary elements */
+--color-tertiary: #ec4899; /* Pink - Accent highlights */
+```
+
+**Utility Classes Available**:
+
+- **Solid Colors**: `bg-brand-primary`, `text-brand-secondary`, `border-brand-tertiary`
+- **Gradients**:
+  - `bg-brand-gradient` (primary → secondary)
+  - `bg-brand-gradient-full` (primary → secondary → tertiary)
+  - `text-brand-gradient` (gradient text effect)
+- **Hover States**: `hover:border-brand-secondary`, `hover:text-brand-primary`
+
+**Example Usage**:
+
+```tsx
+// Button with gradient
+<button className="bg-brand-gradient text-white">Click Me</button>
+
+// Gradient text
+<h1 className="text-brand-gradient">Welcome</h1>
+
+// Solid color with hover
+<div className="border-2 border-gray-300 hover:border-brand-secondary">
+```
+
+**To Change Colors**: Simply update the three CSS variables in `globals.css` and the entire website will reflect the new color scheme instantly!
 
 ## 📱 Pages Structure
 

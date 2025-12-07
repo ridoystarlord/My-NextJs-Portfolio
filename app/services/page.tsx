@@ -27,7 +27,7 @@ const services = [
       "Authentication & Authorization",
       "Third-party API Integrations",
     ],
-    gradient: "from-blue-600 to-purple-600",
+    gradient: "bg-brand-gradient",
   },
   {
     icon: FaCode,
@@ -42,7 +42,7 @@ const services = [
       "User Authentication",
       "Payment Gateway Integration",
     ],
-    gradient: "from-purple-600 to-pink-600",
+    gradient: "from-brand-secondary to-brand-tertiary",
   },
   {
     icon: FaLaptopCode,
@@ -182,13 +182,13 @@ export default function ServicesPage() {
               initial={{ opacity: 0, scale: 0.5 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.2 }}
-              className="inline-block px-4 py-2 bg-linear-to-r from-blue-600 to-purple-600 text-white rounded-full text-sm font-medium shadow-lg mb-6"
+              className="inline-block px-4 py-2 bg-brand-gradient text-white rounded-full text-sm font-medium shadow-lg mb-6"
             >
               Services & Pricing
             </motion.span>
 
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6">
-              <span className="bg-linear-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+              <span className="text-brand-gradient">
                 Professional Development Services
               </span>
             </h1>
@@ -211,9 +211,7 @@ export default function ServicesPage() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl sm:text-5xl font-bold mb-4">
-            <span className="bg-linear-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
-              What I Offer
-            </span>
+            <span className="text-brand-gradient">What I Offer</span>
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-400">
             Comprehensive development services tailored to your needs
@@ -271,9 +269,7 @@ export default function ServicesPage() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl sm:text-5xl font-bold mb-4">
-              <span className="bg-linear-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
-                Transparent Pricing
-              </span>
+              <span className="text-brand-gradient">Transparent Pricing</span>
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-400">
               Choose the plan that fits your project needs
@@ -297,7 +293,7 @@ export default function ServicesPage() {
               >
                 {plan.highlighted && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-linear-to-r from-purple-600 to-pink-600 text-white px-4 py-1 rounded-full text-sm font-medium shadow-lg">
+                    <span className="from-brand-secondary to-brand-tertiary text-white px-4 py-1 rounded-full text-sm font-medium shadow-lg">
                       Most Popular
                     </span>
                   </div>
@@ -311,7 +307,7 @@ export default function ServicesPage() {
                     {plan.description}
                   </p>
                   <div className="mb-2">
-                    <span className="text-5xl font-bold bg-linear-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                    <span className="text-5xl font-bold text-brand-gradient">
                       {plan.price}
                     </span>
                   </div>
@@ -338,7 +334,7 @@ export default function ServicesPage() {
                     whileTap={{ scale: 0.95 }}
                     className={`w-full py-4 rounded-full font-semibold text-lg transition-all ${
                       plan.highlighted
-                        ? "bg-linear-to-r from-purple-600 to-pink-600 text-white shadow-lg hover:shadow-xl"
+                        ? "from-brand-secondary to-brand-tertiary text-white shadow-lg hover:shadow-xl"
                         : "bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-600"
                     }`}
                   >
@@ -359,7 +355,7 @@ export default function ServicesPage() {
               Need a custom solution?{" "}
               <Link
                 href="/contact"
-                className="text-purple-600 hover:text-purple-700 font-semibold"
+                className="text-brand-secondary hover:text-purple-700 font-semibold"
               >
                 Let&apos;s discuss your project →
               </Link>
@@ -378,9 +374,7 @@ export default function ServicesPage() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl sm:text-5xl font-bold mb-4">
-              <span className="bg-linear-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
-                How I Work
-              </span>
+              <span className="text-brand-gradient">How I Work</span>
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-400">
               A streamlined process for successful project delivery
@@ -401,7 +395,7 @@ export default function ServicesPage() {
                   <div className="text-6xl font-bold text-gray-200 dark:text-gray-700 mb-4">
                     {step.step}
                   </div>
-                  <div className="inline-flex p-3 bg-linear-to-br from-blue-600 to-purple-600 rounded-xl text-white text-2xl mb-4">
+                  <div className="inline-flex p-3 bg-brand-gradient rounded-xl text-white text-2xl mb-4">
                     <step.icon />
                   </div>
                   <h3 className="text-xl font-bold mb-3 text-gray-900 dark:text-white">
@@ -424,7 +418,7 @@ export default function ServicesPage() {
 
       {/* CTA Section */}
       <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-linear-to-br from-blue-600 via-purple-600 to-pink-600 -z-10" />
+        <div className="absolute inset-0 bg-brand-gradient-full -z-10" />
 
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center relative z-10">
           <motion.div
@@ -443,7 +437,7 @@ export default function ServicesPage() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-10 py-4 bg-white text-purple-600 rounded-full font-bold text-lg shadow-2xl hover:shadow-3xl transition-all inline-flex items-center space-x-2"
+                className="px-10 py-4 bg-white text-brand-secondary rounded-full font-bold text-lg shadow-2xl hover:shadow-3xl transition-all inline-flex items-center space-x-2"
               >
                 <span>Get In Touch</span>
                 <FaArrowRight />

@@ -97,7 +97,7 @@ const featuredProjects = [
     description:
       "Advanced POS System with inventory management, real-time analytics, and multi-store support",
     tech: ["Next.js", "Node.js", "PostgreSQL", "Redis"],
-    gradient: "from-blue-600 via-purple-600 to-pink-600",
+    gradient: "bg-brand-gradient-full",
     icon: FaBolt,
   },
   {
@@ -151,7 +151,7 @@ export default function Home() {
                 transition={{ delay: 0.2 }}
                 className="inline-block mb-4"
               >
-                <span className="px-4 py-2 bg-linear-to-r from-blue-600 to-purple-600 text-white rounded-full text-sm font-medium shadow-lg">
+                <span className="px-4 py-2 bg-brand-gradient text-white rounded-full text-sm font-medium shadow-lg">
                   ✨ Available for Freelance Projects
                 </span>
               </motion.div>
@@ -162,10 +162,7 @@ export default function Home() {
                 transition={{ delay: 0.3 }}
                 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 leading-tight"
               >
-                Hey, I'm{" "}
-                <span className="bg-linear-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
-                  Ridoy
-                </span>
+                Hey, I'm <span className="text-brand-gradient">Ridoy</span>
               </motion.h1>
 
               <motion.p
@@ -176,11 +173,11 @@ export default function Home() {
               >
                 Backend-focused Full Stack Developer architecting scalable
                 systems with{" "}
-                <span className="font-semibold text-blue-600 dark:text-blue-400">
+                <span className="font-semibold text-brand-primary dark:text-blue-400">
                   NestJS
                 </span>
                 ,{" "}
-                <span className="font-semibold text-purple-600 dark:text-purple-400">
+                <span className="font-semibold text-brand-secondary dark:text-purple-400">
                   Go
                 </span>
                 , and{" "}
@@ -197,11 +194,11 @@ export default function Home() {
               >
                 <p className="text-lg text-gray-700 dark:text-gray-300 mb-2">
                   🚀 Co-founder & CTO at{" "}
-                  <span className="font-bold text-blue-600">Softs.ai</span>
+                  <span className="font-bold text-brand-primary">Softs.ai</span>
                 </p>
                 <p className="text-lg text-gray-700 dark:text-gray-300">
                   💼 Full Stack Developer at{" "}
-                  <span className="font-bold text-purple-600">
+                  <span className="font-bold text-brand-secondary">
                     Bevy Commerce
                   </span>
                 </p>
@@ -220,7 +217,7 @@ export default function Home() {
                       boxShadow: "0 20px 40px rgba(139, 92, 246, 0.4)",
                     }}
                     whileTap={{ scale: 0.95 }}
-                    className="px-8 py-4 bg-linear-to-r from-blue-600 to-purple-600 text-white rounded-full font-semibold text-lg shadow-xl hover:shadow-2xl transition-all flex items-center space-x-2"
+                    className="px-8 py-4 bg-brand-gradient text-white rounded-full font-semibold text-lg shadow-xl hover:shadow-2xl transition-all flex items-center space-x-2"
                   >
                     <span>View My Work</span>
                     <FaArrowRight />
@@ -303,7 +300,7 @@ export default function Home() {
                 transition={{ delay: index * 0.1 }}
                 className="text-center"
               >
-                <div className="text-4xl sm:text-5xl font-bold bg-linear-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-2">
+                <div className="text-4xl sm:text-5xl font-bold text-brand-gradient mb-2">
                   {stat.number}
                 </div>
                 <div className="text-gray-600 dark:text-gray-400 font-medium">
@@ -325,7 +322,7 @@ export default function Home() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl sm:text-5xl font-bold mb-4">
-              <span className="bg-linear-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+              <span className="text-brand-gradient">
                 Tech Stack & Expertise
               </span>
             </h2>
@@ -370,7 +367,7 @@ export default function Home() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl sm:text-5xl font-bold mb-4">
-              <span className="bg-linear-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+              <span className="text-brand-gradient">
                 Agile Development Process
               </span>
             </h2>
@@ -423,9 +420,7 @@ export default function Home() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl sm:text-5xl font-bold mb-4">
-              <span className="bg-linear-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
-                Featured Projects
-              </span>
+              <span className="text-brand-gradient">Featured Projects</span>
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-400">
               Check out some of my recent work
@@ -488,7 +483,7 @@ export default function Home() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-linear-to-r from-blue-600 to-purple-600 text-white rounded-full font-semibold text-lg shadow-xl hover:shadow-2xl transition-all inline-flex items-center space-x-2"
+                className="px-8 py-4 bg-brand-gradient text-white rounded-full font-semibold text-lg shadow-xl hover:shadow-2xl transition-all inline-flex items-center space-x-2"
               >
                 <span>View All Projects</span>
                 <FaArrowRight />
@@ -500,7 +495,7 @@ export default function Home() {
 
       {/* CTA Section */}
       <section className="py-20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-linear-to-br from-blue-600 via-purple-600 to-pink-600 -z-10" />
+        <div className="absolute inset-0 bg-brand-gradient-full -z-10" />
         <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-20" />
 
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
@@ -520,7 +515,7 @@ export default function Home() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-10 py-4 bg-white text-purple-600 rounded-full font-bold text-lg shadow-2xl hover:shadow-3xl transition-all inline-flex items-center space-x-2"
+                className="px-10 py-4 bg-white text-brand-secondary rounded-full font-bold text-lg shadow-2xl hover:shadow-3xl transition-all inline-flex items-center space-x-2"
               >
                 <span>Get In Touch</span>
                 <FaArrowRight />

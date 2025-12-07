@@ -128,13 +128,13 @@ export default function ContactPage() {
               initial={{ opacity: 0, scale: 0.5 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.2 }}
-              className="inline-block px-4 py-2 bg-linear-to-r from-blue-600 to-purple-600 text-white rounded-full text-sm font-medium shadow-lg mb-6"
+              className="inline-block px-4 py-2 bg-brand-gradient text-white rounded-full text-sm font-medium shadow-lg mb-6"
             >
               Get In Touch
             </motion.span>
 
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6">
-              <span className="bg-linear-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+              <span className="text-brand-gradient">
                 Let&apos;s Work Together
               </span>
             </h1>
@@ -272,7 +272,7 @@ export default function ContactPage() {
                 disabled={isSubmitting}
                 whileHover={{ scale: isSubmitting ? 1 : 1.02 }}
                 whileTap={{ scale: isSubmitting ? 1 : 0.98 }}
-                className={`w-full px-8 py-4 bg-linear-to-r from-blue-600 to-purple-600 text-white rounded-full font-semibold text-lg shadow-xl hover:shadow-2xl transition-all flex items-center justify-center space-x-2 ${
+                className={`w-full px-8 py-4 bg-brand-gradient text-white rounded-full font-semibold text-lg shadow-xl hover:shadow-2xl transition-all flex items-center justify-center space-x-2 ${
                   isSubmitting ? "opacity-70 cursor-not-allowed" : ""
                 }`}
               >
@@ -354,7 +354,7 @@ export default function ContactPage() {
             </div>
 
             {/* Additional Info */}
-            <div className="bg-linear-to-br from-blue-600 via-purple-600 to-pink-600 rounded-3xl p-8 text-white">
+            <div className="bg-brand-gradient-full rounded-3xl p-8 text-white">
               <h3 className="text-2xl font-bold mb-4">Quick Response</h3>
               <p className="mb-4 leading-relaxed">
                 I typically respond to inquiries within 24 hours. For urgent
@@ -388,7 +388,7 @@ export default function ContactPage() {
           className="text-center mb-12"
         >
           <h2 className="text-4xl font-bold mb-4">
-            <span className="bg-linear-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+            <span className="text-brand-gradient">
               Frequently Asked Questions
             </span>
           </h2>

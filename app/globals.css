@@ -76,6 +76,29 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+
+  /* ========================================
+     Brand Colors - Centralized Color System
+     ========================================
+     Change these values to instantly update colors across the entire website.
+     
+     Primary (Blue): Main brand color for primary actions and emphasis
+     Secondary (Purple): Supporting brand color for variety and gradients  
+     Tertiary (Pink): Accent color for highlights and CTAs
+     
+     Usage Examples:
+     - Solid: bg-brand-primary, text-brand-secondary
+     - Borders: border-brand-tertiary
+     - Gradients: bg-brand-gradient (primary→secondary)
+                  bg-brand-gradient-full (primary→secondary→tertiary)
+                  text-brand-gradient (gradient text effect)
+  ======================================== */
+  --color-primary: #3b82f6; /* Blue */
+  --color-secondary: #8b5cf6; /* Purple */
+  --color-tertiary: #ec4899; /* Pink */
+  --color-accent-1: #10b981; /* Emerald */
+  --color-accent-2: #06b6d4; /* Cyan */
+  --color-accent-3: #14b8a6; /* Teal */
 }
 
 .dark {
@@ -203,14 +226,23 @@ body {
 
 /* Gradient Text */
 .gradient-text {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(
+    135deg,
+    var(--color-secondary) 0%,
+    var(--color-tertiary) 100%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .gradient-text-blue-purple {
-  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 50%, #ec4899 100%);
+  background: linear-gradient(
+    135deg,
+    var(--color-primary) 0%,
+    var(--color-secondary) 50%,
+    var(--color-tertiary) 100%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -226,12 +258,20 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(
+    180deg,
+    var(--color-secondary) 0%,
+    var(--color-tertiary) 100%
+  );
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #764ba2 0%, #667eea 100%);
+  background: linear-gradient(
+    180deg,
+    var(--color-tertiary) 0%,
+    var(--color-secondary) 100%
+  );
 }
 
 .dark ::-webkit-scrollbar-track {
@@ -239,7 +279,11 @@ body {
 }
 
 .dark ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #3b82f6 0%, #8b5cf6 100%);
+  background: linear-gradient(
+    180deg,
+    var(--color-primary) 0%,
+    var(--color-secondary) 100%
+  );
 }
 
 /* Card Hover Effects */
@@ -268,6 +312,80 @@ body {
 
 .pause-marquee:hover {
   animation-play-state: paused;
+}
+
+/* Brand Color Utilities */
+.bg-brand-primary {
+  background-color: var(--color-primary);
+}
+
+.bg-brand-secondary {
+  background-color: var(--color-secondary);
+}
+
+.bg-brand-tertiary {
+  background-color: var(--color-tertiary);
+}
+
+.text-brand-primary {
+  color: var(--color-primary);
+}
+
+.text-brand-secondary {
+  color: var(--color-secondary);
+}
+
+.text-brand-tertiary {
+  color: var(--color-tertiary);
+}
+
+.border-brand-primary {
+  border-color: var(--color-primary);
+}
+
+.border-brand-secondary {
+  border-color: var(--color-secondary);
+}
+
+.border-brand-tertiary {
+  border-color: var(--color-tertiary);
+}
+
+.bg-brand-gradient {
+  background: linear-gradient(
+    to right,
+    var(--color-primary),
+    var(--color-secondary)
+  );
+}
+
+.bg-brand-gradient-full {
+  background: linear-gradient(
+    to right,
+    var(--color-primary),
+    var(--color-secondary),
+    var(--color-tertiary)
+  );
+}
+
+.text-brand-gradient {
+  background: linear-gradient(
+    to right,
+    var(--color-primary),
+    var(--color-secondary),
+    var(--color-tertiary)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hover\:border-brand-secondary:hover {
+  border-color: var(--color-secondary);
+}
+
+.hover\:text-brand-primary:hover {
+  color: var(--color-primary);
 }
 
 @layer base {

@@ -146,7 +146,7 @@ export default function GalleryPage() {
               initial={{ opacity: 0, scale: 0.5 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.2 }}
-              className="inline-block px-4 py-2 bg-linear-to-r from-blue-600 to-purple-600 text-white rounded-full text-sm font-medium shadow-lg mb-6"
+              className="inline-block px-4 py-2 bg-brand-gradient text-white rounded-full text-sm font-medium shadow-lg mb-6"
             >
               Visual Portfolio
             </motion.span>
@@ -180,8 +180,8 @@ export default function GalleryPage() {
               onClick={() => setSelectedCategory(category)}
               className={`px-6 py-2 rounded-full font-medium transition-all ${
                 selectedCategory === category
-                  ? "bg-linear-to-r from-blue-600 to-purple-600 text-white shadow-lg"
-                  : "bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
+                  ? "bg-brand-gradient text-white shadow-lg"
+                  : "bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600"
               }`}
             >
               {category}
@@ -242,9 +242,7 @@ export default function GalleryPage() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl sm:text-5xl font-bold mb-4">
-              <span className="bg-linear-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
-                Client Testimonials
-              </span>
+              <span className="text-brand-gradient">Client Testimonials</span>
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-400">
               What clients say about working with me
@@ -263,7 +261,7 @@ export default function GalleryPage() {
                 className="bg-white dark:bg-gray-800 rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all relative"
               >
                 {/* Quote Icon */}
-                <FaQuoteLeft className="text-4xl text-blue-600 opacity-20 absolute top-6 left-6" />
+                <FaQuoteLeft className="text-4xl text-brand-primary opacity-20 absolute top-6 left-6" />
 
                 {/* Rating */}
                 <div className="flex space-x-1 mb-4 relative z-10">
@@ -281,7 +279,7 @@ export default function GalleryPage() {
 
                 {/* Author */}
                 <div className="flex items-center space-x-4 relative z-10">
-                  <div className="w-12 h-12 bg-linear-to-br from-blue-600 to-purple-600 rounded-full flex items-center justify-center text-2xl">
+                  <div className="w-12 h-12 bg-brand-gradient rounded-full flex items-center justify-center text-2xl">
                     {testimonial.avatar}
                   </div>
                   <div>
