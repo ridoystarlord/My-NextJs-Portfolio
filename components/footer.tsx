@@ -28,13 +28,12 @@ const footerLinks = {
 };
 
 const socialLinks = [
-  { icon: FaGithub, href: "https://github.com/ridoy", label: "GitHub" },
+  { icon: FaGithub, href: "https://github.com/ridoystarlord", label: "GitHub" },
   {
     icon: FaLinkedin,
-    href: "https://linkedin.com/in/ridoy",
+    href: "https://www.linkedin.com/in/ridoystarlord2/",
     label: "LinkedIn",
   },
-  { icon: FaTwitter, href: "https://twitter.com/ridoy", label: "Twitter" },
 ];
 
 export default function Footer() {

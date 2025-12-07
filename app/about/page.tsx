@@ -11,6 +11,7 @@ import {
   FaHeart,
   FaCode,
   FaLightbulb,
+  FaTrophy,
 } from "react-icons/fa";
 import {
   SiNestjs,
@@ -36,6 +37,9 @@ import {
   SiGithubactions,
   SiShopify,
   SiGraphql,
+  SiLeetcode,
+  SiCodeforces,
+  SiHackerrank,
 } from "react-icons/si";
 import {
   Tooltip,
@@ -137,8 +141,39 @@ const allSkills = [
 const achievements = [
   { number: "50+", label: "Projects Delivered", icon: FaRocket },
   { number: "30+", label: "Happy Clients", icon: FaUsers },
-  { number: "10+", label: "Countries Served", icon: FaGlobe },
+  { number: "450+", label: "Problems Solved", icon: FaCode },
   { number: "4+", label: "Years Experience", icon: FaAward },
+];
+
+const competitiveProgramming = [
+  {
+    name: "LeetCode",
+    icon: SiLeetcode,
+    url: "https://leetcode.com/RidoyStarlord/",
+    color: "#FFA116",
+    description: "Solved algorithmic problems",
+  },
+  {
+    name: "Codeforces",
+    icon: SiCodeforces,
+    url: "https://codeforces.com/profile/RidoyStarlord",
+    color: "#1F8ACB",
+    description: "Competitive programming",
+  },
+  {
+    name: "HackerRank",
+    icon: SiHackerrank,
+    url: "https://www.hackerrank.com/profile/ridoystarlord",
+    color: "#00EA64",
+    description: "Problem-solving challenges",
+  },
+  {
+    name: "Beecrowd",
+    icon: FaTrophy,
+    url: "https://www.beecrowd.com.br/judge/en/profile/177395",
+    color: "#4CAF50",
+    description: "Judge profile",
+  },
 ];
 
 export default function AboutPage() {
@@ -179,6 +214,12 @@ export default function AboutPage() {
                 & CTO of Softs.ai and Full Stack Developer at Bevy Commerce, I
                 specialize in creating scalable solutions using React, Next.js,
                 Node.js, Go, and Shopify.
+                <br />
+                <br />
+                With a strong foundation in problem-solving, I&apos;ve solved
+                450+ algorithmic challenges across LeetCode, Codeforces,
+                HackerRank, and Beecrowd, sharpening my skills in data
+                structures and algorithms.
               </p>
 
               <div className="flex flex-wrap gap-4">
@@ -424,6 +465,66 @@ export default function AboutPage() {
                 )}
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Competitive Programming Section */}
+      <section className="py-20 bg-white dark:bg-gray-900/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl sm:text-5xl font-bold mb-4">
+              <span className="text-brand-gradient">
+                Competitive Programming
+              </span>
+            </h2>
+            <p className="text-xl text-gray-600 dark:text-gray-400">
+              I have solved more than 450+ problems across different online
+              judges including LeetCode, Codeforces, HackerRank, and Beecrowd
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {competitiveProgramming.map((platform, index) => (
+              <motion.a
+                key={platform.name}
+                href={platform.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                whileHover={{ y: -8, scale: 1.02 }}
+                className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all border-2 border-transparent hover:border-brand-secondary group"
+              >
+                <div className="flex flex-col items-center text-center">
+                  <div
+                    className="w-16 h-16 rounded-2xl flex items-center justify-center mb-4 transition-all group-hover:scale-110"
+                    style={{ backgroundColor: `${platform.color}15` }}
+                  >
+                    <platform.icon
+                      className="text-4xl"
+                      style={{ color: platform.color }}
+                    />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
+                    {platform.name}
+                  </h3>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">
+                    {platform.description}
+                  </p>
+                  <div className="mt-4 text-sm font-semibold text-brand-secondary group-hover:text-brand-primary transition-colors">
+                    View Profile →
+                  </div>
+                </div>
+              </motion.a>
+            ))}
           </div>
         </div>
       </section>
