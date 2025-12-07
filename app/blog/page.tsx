@@ -273,7 +273,7 @@ export default function BlogPage() {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-6 py-4 rounded-full text-gray-900 focus:outline-none"
+                className="flex-1 px-6 py-4 rounded-full text-gray-900 bg-white placeholder:text-gray-500 focus:outline-none focus:ring-4 focus:ring-white/30 shadow-lg font-medium"
               />
               <motion.button
                 whileHover={{ scale: 1.05 }}
