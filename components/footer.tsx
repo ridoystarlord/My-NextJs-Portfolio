@@ -124,15 +124,25 @@ export default function Footer() {
             <ul className="space-y-3">
               <li className="flex items-center space-x-3 text-gray-300">
                 <FaEnvelope className="text-blue-400" />
-                <span>hello@ridoy.dev</span>
+                <a 
+                  href="mailto:ridoy.starlord@gmail.com"
+                  className="hover:text-blue-400 transition-colors"
+                >
+                  ridoy.starlord@gmail.com
+                </a>
               </li>
               <li className="flex items-center space-x-3 text-gray-300">
                 <FaPhone className="text-green-400" />
-                <span>+880 1XXX-XXXXXX</span>
+                <a 
+                  href="tel:+8801785706971"
+                  className="hover:text-green-400 transition-colors"
+                >
+                  +880 1785-706971
+                </a>
               </li>
               <li className="flex items-center space-x-3 text-gray-300">
                 <FaMapMarkerAlt className="text-red-400" />
-                <span>Dhaka, Bangladesh</span>
+                <span>Tangail, Dhaka, Bangladesh</span>
               </li>
             </ul>
 
