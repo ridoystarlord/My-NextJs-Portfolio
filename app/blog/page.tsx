@@ -104,7 +104,7 @@ export default function BlogPage() {
   });
 
   return (
-    <div className="min-h-screen pt-32 pb-20">
+    <div className="min-h-screen pt-32">
       {/* Hero Section */}
       <section className="relative overflow-hidden mb-20 py-20">
         <div className="absolute inset-0 bg-linear-to-br from-blue-50 via-purple-50 to-pink-50 dark:from-gray-900 dark:via-purple-900/20 dark:to-pink-900/20 -z-10" />
