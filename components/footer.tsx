@@ -124,7 +124,7 @@ export default function Footer() {
             <ul className="space-y-3">
               <li className="flex items-center space-x-3 text-gray-300">
                 <FaEnvelope className="text-blue-400" />
-                <a 
+                <a
                   href="mailto:ridoy.starlord@gmail.com"
                   className="hover:text-blue-400 transition-colors"
                 >
@@ -133,7 +133,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center space-x-3 text-gray-300">
                 <FaPhone className="text-green-400" />
-                <a 
+                <a
                   href="tel:+8801785706971"
                   className="hover:text-green-400 transition-colors"
                 >
