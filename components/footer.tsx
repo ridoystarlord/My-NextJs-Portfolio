@@ -59,8 +59,8 @@ export default function Footer() {
               Ridoy.dev
             </h3>
             <p className="text-gray-300 mb-4 leading-relaxed">
-              Co-founder & CTO of Softs.ai. Full Stack Developer at Bevy
-              Commerce. Building world-class web applications.
+              Full Stack Developer at Bevy Commerce. Building world-class web
+              applications.
             </p>
             <div className="flex items-center space-x-4 text-2xl">
               <SiReact className="text-blue-400" />

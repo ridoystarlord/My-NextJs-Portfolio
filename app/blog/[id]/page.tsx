@@ -508,7 +508,7 @@ export default function BlogDetailPage() {
                 </div>
                 <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
                   Backend-focused developer specializing in NestJS, Go, and
-                  scalable architecture. Co-founder & CTO of Softs.ai.
+                  scalable architecture.
                 </p>
                 <Link
                   href="/about"

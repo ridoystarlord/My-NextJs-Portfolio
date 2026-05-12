@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   title:
     "Mehedi Hasan Ridoy - Full Stack Developer | React, Next.js, Shopify Expert",
   description:
-    "Co-founder & CTO at Softs.ai. Full Stack Developer specializing in React, Next.js, Shopify Apps, and modern web development. 4+ years of experience building world-class applications.",
+    "Full Stack Developer specializing in React, Next.js, Shopify Apps, and modern web development. 4+ years of experience building world-class applications.",
   keywords: [
     "Mehedi Hasan Ridoy",
     "Full Stack Developer",
@@ -44,14 +44,14 @@ export const metadata: Metadata = {
     url: "https://ridoy.dev",
     title: "Mehedi Hasan Ridoy - Full Stack Developer",
     description:
-      "Co-founder & CTO at Softs.ai. Full Stack Developer specializing in React, Next.js, and Shopify development.",
+      "Full Stack Developer specializing in React, Next.js, and Shopify development.",
     siteName: "Ridoy.dev",
   },
   twitter: {
     card: "summary_large_image",
     title: "Mehedi Hasan Ridoy - Full Stack Developer",
     description:
-      "Co-founder & CTO at Softs.ai. Full Stack Developer specializing in React, Next.js, and Shopify development.",
+      "Full Stack Developer specializing in React, Next.js, and Shopify development.",
     creator: "@ridoy",
   },
   metadataBase: new URL("https://ridoy.dev"),

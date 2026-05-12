@@ -76,13 +76,13 @@ const journey = [
       "Started as Full Stack Developer, designing and implementing backend architecture for e-commerce platforms.",
     icon: FaLightbulb,
   },
-  {
-    year: "2024",
-    title: "Co-founded Softs.ai",
-    description:
-      "Launched product-based startup with 2 co-founders as CTO, building innovative SaaS products with focus on backend architecture.",
-    icon: FaAward,
-  },
+  // {
+  //   year: "2024",
+  //   title: "Co-founded Softs.ai",
+  //   description:
+  //     "Launched product-based startup with 2 co-founders as CTO, building innovative SaaS products with focus on backend architecture.",
+  //   icon: FaAward,
+  // },
 ];
 
 const companies = [
@@ -94,14 +94,14 @@ const companies = [
     description:
       "Designing and implementing scalable backend architecture for e-commerce solutions. Working with NestJS, Go, PostgreSQL, and microservices.",
   },
-  {
-    name: "Softs.ai",
-    role: "Co-founder & CTO",
-    period: "January 2024 - Present",
-    location: "Bangladesh",
-    description:
-      "Product-based startup with 3 co-founders. Building innovative SaaS products including Retail Pilot, Accounting Pilot, and Message Pilot. Leading backend architecture design, database modeling, and system scalability.",
-  },
+  // {
+  //   name: "Softs.ai",
+  //   role: "Co-founder & CTO",
+  //   period: "January 2024 - Present",
+  //   location: "Bangladesh",
+  //   description:
+  //     "Product-based startup with 3 co-founders. Building innovative SaaS products including Retail Pilot, Accounting Pilot, and Message Pilot. Leading backend architecture design, database modeling, and system scalability.",
+  // },
   {
     name: "Workspace Infotech Limited",
     role: "Junior Software Engineer",
@@ -210,10 +210,9 @@ export default function AboutPage() {
 
               <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed mb-8">
                 I&apos;m a passionate full stack developer with 4+ years of
-                experience building world-class web applications. As Co-founder
-                & CTO of Softs.ai and Full Stack Developer at Bevy Commerce, I
-                specialize in creating scalable solutions using React, Next.js,
-                Node.js, Go, and Shopify.
+                experience building world-class web applications. Full Stack
+                Developer at Bevy Commerce, I specialize in creating scalable
+                solutions using React, Next.js, Node.js, Go, and Shopify.
                 <br />
                 <br />
                 With a strong foundation in problem-solving, I&apos;ve solved
@@ -461,7 +460,7 @@ export default function AboutPage() {
                         {skill.name}
                       </TooltipContent>
                     </Tooltip>
-                  )
+                  ),
                 )}
               </div>
             </div>

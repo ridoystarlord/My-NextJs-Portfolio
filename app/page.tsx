@@ -192,10 +192,10 @@ export default function Home() {
                 transition={{ delay: 0.5 }}
                 className="mb-8"
               >
-                <p className="text-lg text-gray-700 dark:text-gray-300 mb-2">
+                {/* <p className="text-lg text-gray-700 dark:text-gray-300 mb-2">
                   🚀 Co-founder & CTO at{" "}
                   <span className="font-bold text-brand-primary">Softs.ai</span>
-                </p>
+                </p> */}
                 <p className="text-lg text-gray-700 dark:text-gray-300">
                   💼 Full Stack Developer at{" "}
                   <span className="font-bold text-brand-secondary">

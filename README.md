@@ -47,7 +47,7 @@ Visit: [ridoy.dev](https://ridoy.dev)
 #### 👨‍💻 About
 
 - Professional journey timeline
-- Work experience with companies (Bevy Commerce, Softs.ai, IBOS Limited)
+- Work experience with companies (Bevy Commerce, IBOS Limited)
 - Skills categorized by expertise
 - Achievement statistics
 - International client experience (UAE, Netherlands, Singapore, Germany, Holland)
